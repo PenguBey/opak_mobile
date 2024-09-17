@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/color_con.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +25,6 @@ class MyApp extends StatelessWidget {
 
 class MainMenu extends StatelessWidget {
   const MainMenu({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,8 +37,8 @@ class MainMenu extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      color: Colors.red),
-                  padding: const EdgeInsets.all(3.0),
+                      color: ColorCon.cicleAvatar),
+                  padding: EdgeCon.cicleAvatar,
                   child: const CircleAvatar(
                     foregroundImage: NetworkImage(
                         "https://avatars.githubusercontent.com/u/124432670?v=4"),
@@ -47,7 +48,7 @@ class MainMenu extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Hayırlı Günler",
+                      "Hayırlı Günler \uD83C\uDF24",
                     ),
                     Text("SELMAN KOYUNCU"),
                     Text("MUHASEBE FİNANS EHİL PERSONELİ")
@@ -55,6 +56,134 @@ class MainMenu extends StatelessWidget {
                 ),
                 const Column(
                   children: [Icon(Icons.wb_sunny_outlined), Text("32°")],
+                )
+              ],
+            ),
+          ),
+          const IntrinsicHeight(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Card(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Kıdem Gününüz"),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Column(
+                              children: [
+                                Text("1 yıl"),
+                                Text("11 ay"),
+                                Text("16 gün")
+                              ],
+                            ),
+                            Icon(
+                              Icons.directions_walk_sharp,
+                              size: 50,
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Vardiya"),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Icon(
+                              Icons.directions_walk_sharp,
+                              size: 50,
+                            ),
+                            Column(
+                              children: [
+                                Text("N0818.Vardiya"),
+                                Text("08:00 - 18:00"),
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    RichText(
+                      text: const TextSpan(
+                        children: [
+                          WidgetSpan(
+                            child: Icon(Icons.calendar_month_outlined),
+                          ),
+                          TextSpan(
+                            text: "  22.08.2024 - Perşembe",
+                            style: TextStyle(
+                              color: ColorCon.takvim,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Text(
+                      "10 Sa. 21 Dk.",
+                      style: TextStyle(color: Colors.red),
+                    )
+                  ],
+                ),
+                const IntrinsicHeight(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: [
+                            Card(
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Giriş: 07:45"),
+                              ),
+                            ),
+                            Card(
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Çıkış 18:06"),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Card(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Net Süre"),
+                              Text("9 Sa."),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(child: SizedBox())
+                    ],
+                  ),
                 )
               ],
             ),
