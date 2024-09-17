@@ -131,7 +131,10 @@ class MainMenu extends StatelessWidget {
                       text: const TextSpan(
                         children: [
                           WidgetSpan(
-                            child: Icon(Icons.calendar_month_outlined),
+                            child: Icon(
+                              Icons.calendar_month_outlined,
+                              color: ColorCon.takvim,
+                            ),
                           ),
                           TextSpan(
                             text: "  22.08.2024 - Perşembe",
@@ -153,6 +156,7 @@ class MainMenu extends StatelessWidget {
                   child: Row(
                     children: [
                       Expanded(
+                        flex: 2,
                         child: Column(
                           children: [
                             Card(
@@ -171,6 +175,7 @@ class MainMenu extends StatelessWidget {
                         ),
                       ),
                       Expanded(
+                        flex: 2,
                         child: Card(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -184,7 +189,60 @@ class MainMenu extends StatelessWidget {
                       Expanded(child: SizedBox())
                     ],
                   ),
+                ),
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text("Yemek Listesi"),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    const Icon(
+                      Icons.food_bank_outlined,
+                      size: 50,
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        height: 100,
+                        child: ListView.builder(
+                          itemCount: 5,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return const Card(
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(Icons.dining_outlined),
+                                  Text("Yemek Menüsü")
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 )
+              ],
+            ),
+          ),
+          const Card(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.notifications_none,
+                      size: 50,
+                    ),
+                    Text("Bildirimler")
+                  ],
+                ),
               ],
             ),
           )
