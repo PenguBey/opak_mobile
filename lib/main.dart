@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
 
 class MainMenu extends StatelessWidget {
   const MainMenu({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,66 +61,62 @@ class MainMenu extends StatelessWidget {
               ],
             ),
           ),
-          const IntrinsicHeight(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Kıdem Gününüz"),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Column(
-                              children: [
-                                Text("1 yıl"),
-                                Text("11 ay"),
-                                Text("16 gün")
-                              ],
-                            ),
-                            Icon(
-                              Icons.directions_walk_sharp,
-                              size: 50,
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+          const Row(
+            children: [
+              Expanded(
+                child: Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Kıdem Gününüz"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Text("1 yıl"),
+                              Text("11 ay"),
+                              Text("16 gün")
+                            ],
+                          ),
+                          Icon(
+                            Icons.directions_walk_sharp,
+                            size: 50,
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
-                Expanded(
-                  child: Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Vardiya"),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Icon(
-                              Icons.directions_walk_sharp,
-                              size: 50,
-                            ),
-                            Column(
-                              children: [
-                                Text("N0818.Vardiya"),
-                                Text("08:00 - 18:00"),
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+              ),
+              Expanded(
+                child: Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Vardiya"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.directions_walk_sharp,
+                            size: 50,
+                          ),
+                          Column(
+                            children: [
+                              Text("N0818.Vardiya"),
+                              Text("08:00 - 18:00"),
+                            ],
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           Card(
             child: Column(
@@ -152,43 +149,41 @@ class MainMenu extends StatelessWidget {
                     )
                   ],
                 ),
-                const IntrinsicHeight(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        flex: 2,
+                const Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        children: [
+                          Card(
+                            child: Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text("Giriş: 07:45"),
+                            ),
+                          ),
+                          Card(
+                            child: Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text("Çıkış 18:06"),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Card(
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text("Giriş: 07:45"),
-                              ),
-                            ),
-                            Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text("Çıkış 18:06"),
-                              ),
-                            ),
+                            Text("Net Süre"),
+                            Text("9 Sa."),
                           ],
                         ),
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Card(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Net Süre"),
-                              Text("9 Sa."),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Expanded(child: SizedBox())
-                    ],
-                  ),
+                    ),
+                    Expanded(child: SizedBox())
+                  ],
                 ),
               ],
             ),
@@ -231,10 +226,10 @@ class MainMenu extends StatelessWidget {
               ],
             ),
           ),
-          const Card(
+          Card(
             child: Column(
               children: [
-                Row(
+                const Row(
                   children: [
                     Icon(
                       Icons.notifications_none,
@@ -243,6 +238,21 @@ class MainMenu extends StatelessWidget {
                     Text("Bildirimler")
                   ],
                 ),
+                SizedBox(
+                  height: 200,
+                  child: ListView.builder(
+                    itemCount: 10,
+                    itemBuilder: (context, index) {
+                      return const ListTile(
+                        leading: Icon(
+                          Icons.notifications,
+                          size: 30,
+                        ),
+                        title: Text("30 Ağustps Bilfilendirmesi HK."),
+                      );
+                    },
+                  ),
+                )
               ],
             ),
           )
