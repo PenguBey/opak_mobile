@@ -32,7 +32,7 @@ class MaasView extends StatelessWidget {
                 ),
                 Icon(
                   Icons.directions_walk_sharp,
-                  size: 100,
+                  size: 50,
                 )
               ],
             ),

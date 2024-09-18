@@ -8,6 +8,7 @@ class MainMenuView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Column(
         children: [
           Card(
@@ -222,7 +223,7 @@ class MainMenuView extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 200,
+                  height: 150,
                   child: ListView.builder(
                     itemCount: 10,
                     itemBuilder: (context, index) {
