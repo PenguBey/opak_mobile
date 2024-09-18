@@ -5,6 +5,7 @@ import '../widgets/kidem_gunu_widget.dart';
 import '../widgets/sure_widget.dart';
 import '../widgets/user_tile_widget.dart';
 import '../widgets/vardiya_widget.dart';
+import '../widgets/yemek_listesi_widget.dart';
 
 class MainMenuView extends StatelessWidget {
   const MainMenuView({super.key});
@@ -29,44 +30,7 @@ class MainMenuView extends StatelessWidget {
             ),
           ),
           const SureWidget(),
-          Card(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text("Yemek Listesi"),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    const Icon(
-                      Icons.food_bank_outlined,
-                      size: 50,
-                    ),
-                    Expanded(
-                      child: SizedBox(
-                        height: 100,
-                        child: ListView.builder(
-                          itemCount: 5,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            return const Card(
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Icon(Icons.dining_outlined),
-                                  Text("Yemek Menüsü")
-                                ],
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
+          const YemekListesiWidget(),
           Card(
             child: Column(
               children: [

@@ -59,7 +59,10 @@ class SureWidget extends StatelessWidget {
                             color: ColorCon.backGround,
                             child: Padding(
                               padding: EdgeInsets.all(8.0),
-                              child: Text("Giriş: 07:45"),
+                              child: Text(
+                                "Giriş: 07:45",
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
@@ -69,7 +72,8 @@ class SureWidget extends StatelessWidget {
                             color: ColorCon.backGround,
                             child: Padding(
                               padding: EdgeInsets.all(8.0),
-                              child: Text("Çıkış: 18:06"),
+                              child: Text("Çıkış: 18:06",
+                                  textAlign: TextAlign.center),
                             ),
                           ),
                         ),
