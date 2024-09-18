@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:opak_mobile/views/navigation_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
