@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/views/maas_bilgileri_view.dart';
 import 'package:opak_mobile/views/maas_view.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           scaffoldBackgroundColor: const Color.fromARGB(200, 255, 255, 255)),
-      home: const MaasView(),
+      home: const MaasBilgileriView(),
     );
   }
 }
