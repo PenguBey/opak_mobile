@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:opak_mobile/constants/color_con.dart';
-import 'package:opak_mobile/constants/edge_con.dart';
+
+import '../widgets/user_tile_widget.dart';
 
 class MainMenuView extends StatelessWidget {
   const MainMenuView({super.key});
@@ -11,36 +12,7 @@ class MainMenuView extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          Card(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: ColorCon.cicleAvatar),
-                  padding: EdgeCon.cicleAvatar,
-                  child: const CircleAvatar(
-                    foregroundImage: NetworkImage(
-                        "https://avatars.githubusercontent.com/u/124432670?v=4"),
-                  ),
-                ),
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Hayırlı Günler \uD83C\uDF24",
-                    ),
-                    Text("SELMAN KOYUNCU"),
-                    Text("MUHASEBE FİNANS EHİL PERSONELİ")
-                  ],
-                ),
-                const Column(
-                  children: [Icon(Icons.wb_sunny_outlined), Text("32°")],
-                )
-              ],
-            ),
-          ),
+          const UserTileWidget(),
           const IntrinsicHeight(
             child: Row(
               children: [
