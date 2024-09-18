@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/MenuPage.dart';
+import 'package:opak_mobile/views/MenuPage.dart';
 import 'package:opak_mobile/views/newpage.dart';
 import 'package:opak_mobile/views/profil_page.dart';
 class MainPage extends StatefulWidget {

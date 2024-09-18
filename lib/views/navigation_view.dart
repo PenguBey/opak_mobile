@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:opak_mobile/views/maas_bilgileri_view.dart';
 import 'package:opak_mobile/views/maas_view.dart';
 import 'package:opak_mobile/views/main_menu_view.dart';
+import 'package:opak_mobile/views/mainpage_state.dart';
 
 class NavigationView extends StatelessWidget {
   const NavigationView({super.key});
@@ -51,6 +52,19 @@ class NavigationView extends StatelessWidget {
                 );
               },
               child: const Text("Maaş Bilgileri"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return MainPage();
+                    },
+                  ),
+                );
+              },
+              child: const Text("Efe Baba Pro"),
             ),
           ],
         ),
