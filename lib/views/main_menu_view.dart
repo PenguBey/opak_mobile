@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/constants/color_con.dart';
 
+import '../constants/color_con.dart';
+import '../widgets/kidem_gunu_widget.dart';
+import '../widgets/sure_widget.dart';
 import '../widgets/user_tile_widget.dart';
+import '../widgets/vardiya_widget.dart';
 
 class MainMenuView extends StatelessWidget {
   const MainMenuView({super.key});
@@ -17,133 +20,15 @@ class MainMenuView extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Kıdem Gününüz"),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                Text("1 yıl"),
-                                Text("11 ay"),
-                                Text("16 gün")
-                              ],
-                            ),
-                            Icon(
-                              Icons.directions_walk_sharp,
-                              size: 50,
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+                  child: KidemGunuWidget(),
                 ),
                 Expanded(
-                  child: Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Vardiya"),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(
-                              Icons.directions_walk_sharp,
-                              size: 50,
-                            ),
-                            Column(
-                              children: [
-                                Text("N0818.Vardiya"),
-                                Text("08:00 - 18:00"),
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+                  child: VardiyaWidget(),
                 ),
               ],
             ),
           ),
-          Card(
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    RichText(
-                      text: const TextSpan(
-                        children: [
-                          WidgetSpan(
-                            child: Icon(
-                              Icons.calendar_month_outlined,
-                              color: ColorCon.takvim,
-                            ),
-                          ),
-                          TextSpan(
-                            text: "  22.08.2024 - Perşembe",
-                            style: TextStyle(
-                              color: ColorCon.takvim,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Text(
-                      "10 Sa. 21 Dk.",
-                      style: TextStyle(color: Colors.red),
-                    )
-                  ],
-                ),
-                const IntrinsicHeight(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Column(
-                          children: [
-                            Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text("Giriş: 07:45"),
-                              ),
-                            ),
-                            Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text("Çıkış 18:06"),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Card(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("Net Süre"),
-                              Text("9 Sa."),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Expanded(child: SizedBox())
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          const SureWidget(),
           Card(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
