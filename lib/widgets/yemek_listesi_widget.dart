@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 
 class YemekListesiWidget extends StatelessWidget {
   const YemekListesiWidget({
@@ -8,6 +9,7 @@ class YemekListesiWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: ColorCon.foreGround,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -27,6 +29,7 @@ class YemekListesiWidget extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return const Card(
+                        color: ColorCon.backGround,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [

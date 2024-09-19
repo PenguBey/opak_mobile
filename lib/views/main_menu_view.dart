@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../constants/color_con.dart';
 import '../widgets/kidem_gunu_widget.dart';
 import '../widgets/sure_widget.dart';
 import '../widgets/user_tile_widget.dart';
