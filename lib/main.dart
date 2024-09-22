@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/views/navigation_view.dart';
 
 void main() {
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-          scaffoldBackgroundColor: const Color.fromARGB(200, 255, 255, 255)),
+        scaffoldBackgroundColor: ColorCon.backGround,
+        useMaterial3: true,
+      ),
       home: const NavigationView(),
     );
   }
