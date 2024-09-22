@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
 
+import '../widgets/bildirim_listesi_widget.dart';
 import '../widgets/kidem_gunu_widget.dart';
 import '../widgets/sure_widget.dart';
 import '../widgets/user_tile_widget.dart';
@@ -11,12 +13,12 @@ class MainMenuView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return const Scaffold(
       body: Column(
         children: [
-          const UserTileWidget(),
-          const IntrinsicHeight(
+          EdgeCon.edgeSizedTop,
+          UserTileWidget(),
+          IntrinsicHeight(
             child: Row(
               children: [
                 Expanded(
@@ -28,38 +30,9 @@ class MainMenuView extends StatelessWidget {
               ],
             ),
           ),
-          const SureWidget(),
-          const YemekListesiWidget(),
-          Card(
-            child: Column(
-              children: [
-                const Row(
-                  children: [
-                    Icon(
-                      Icons.notifications_none,
-                      size: 50,
-                    ),
-                    Text("Bildirimler")
-                  ],
-                ),
-                SizedBox(
-                  height: 150,
-                  child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (context, index) {
-                      return const ListTile(
-                        leading: Icon(
-                          Icons.notifications,
-                          size: 30,
-                        ),
-                        title: Text("30 Ağustps Bilfilendirmesi HK."),
-                      );
-                    },
-                  ),
-                )
-              ],
-            ),
-          )
+          SureWidget(),
+          YemekListesiWidget(),
+          BildirimListesiWidget()
         ],
       ),
     );
