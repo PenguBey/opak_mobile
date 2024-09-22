@@ -13,8 +13,8 @@ class MainMenuView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
+    return Scaffold(
+      body: const Column(
         children: [
           EdgeCon.edgeSizedTop,
           UserTileWidget(),
@@ -33,6 +33,18 @@ class MainMenuView extends StatelessWidget {
           SureWidget(),
           YemekListesiWidget(),
           BildirimListesiWidget()
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline_outlined), label: 'profile')
         ],
       ),
     );

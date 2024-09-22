@@ -32,7 +32,7 @@ class BildirimListesiWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 200,
+              height: 140,
               child: ListView.builder(
                 itemCount: 100,
                 itemBuilder: (context, index) {
