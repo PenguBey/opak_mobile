@@ -32,7 +32,7 @@ class BottomnavigationBarWidget extends StatelessWidget {
         ),
         Positioned(
           left: (MediaQuery.of(context).size.width - 56) / 2,
-          bottom: 6,
+          bottom: 12,
           child: GestureDetector(
             onTap: () {},
             child: Container(
