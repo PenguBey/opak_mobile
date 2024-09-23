@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/color_con.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/text_style_con.dart';
 
 class Usertitle2Widget extends StatelessWidget {
   const Usertitle2Widget({
@@ -8,66 +11,59 @@ class Usertitle2Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
-      margin: const EdgeInsets.all(16.0),
+      padding: EdgeCon.middle,
+      margin: EdgeCon.middle,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
+        borderRadius: EdgeCon.raius,
+        boxShadow: const [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: ColorCon.blackshadow,
             spreadRadius: 2,
             blurRadius: 5,
           ),
         ],
       ),
-      child: Row(
+      child: const Row(
         children: <Widget>[
-          const CircleAvatar(
+          CircleAvatar(
             radius: 30,
             backgroundImage: NetworkImage(
                 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541'),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'ZEKERİYA ÇAKIR',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4),
                 Text(
                   'BİLGİSAYAR MÜHENDİSİ',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyleCon.title,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
                 Icons.wb_sunny,
                 size: 40,
-                color: Colors.orange,
+                color: ColorCon.gunes,
               ),
               SizedBox(height: 8),
               Text(
                 '32.3°C',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
-                ),
+                style: TextStyleCon.title,
               ),
             ],
           ),

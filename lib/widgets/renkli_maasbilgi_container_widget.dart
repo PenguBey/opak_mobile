@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/text_style_con.dart';
 
 class RenkliMaasbilgiContainerWidget extends StatelessWidget {
   final Color color;
@@ -17,7 +19,7 @@ class RenkliMaasbilgiContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-      margin: const EdgeInsets.symmetric(vertical: 4),
+      margin: EdgeCon.symlistI,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(8),
@@ -29,12 +31,12 @@ class RenkliMaasbilgiContainerWidget extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: const TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyleCon.negativeStyle,
             ),
           ),
           Text(
             amount,
-            style: const TextStyle(fontSize: 16, color: Colors.white),
+            style: TextStyleCon.negativeStyle,
           ),
         ],
       ),

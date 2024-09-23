@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
 import '../constants/edge_con.dart';
@@ -31,6 +32,7 @@ class BasitBilgialanWiget extends StatelessWidget {
               child: Text(
                 "Dönemsel Maaş Bilgileri",
                 textAlign: TextAlign.right,
+                style: TextStyleCon.miniTitle,
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
 
 class BasitBilgistackWidget extends StatelessWidget {
   final IconData icon;
@@ -19,14 +20,14 @@ class BasitBilgistackWidget extends StatelessWidget {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeCon.card,
               child: Icon(icon, size: 48.0, color: color),
             ),
           ),
           Align(
             alignment: Alignment.topRight,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeCon.card,
               child: Text(title, textAlign: TextAlign.right),
             ),
           ),

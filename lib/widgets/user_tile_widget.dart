@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
@@ -12,7 +13,7 @@ class UserTileWidget extends StatelessWidget {
     return const Card(
       color: ColorCon.foreGround,
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeCon.card,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

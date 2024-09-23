@@ -34,27 +34,30 @@ class KidemGunuWidget extends StatelessWidget {
                   children: [
                     RichText(
                       text: const TextSpan(
-                          style: TextStyle(color: Colors.black),
-                          children: [
-                            TextSpan(text: "1", style: TextStyleCon.miniTitle),
-                            TextSpan(text: " yıl")
-                          ]),
+                        style: TextStyle(color: Colors.black),
+                        children: [
+                          TextSpan(text: "1", style: TextStyleCon.miniTitle),
+                          TextSpan(text: " yıl")
+                        ],
+                      ),
                     ),
                     RichText(
                       text: const TextSpan(
-                          style: TextStyle(color: Colors.black),
-                          children: [
-                            TextSpan(text: "11", style: TextStyleCon.miniTitle),
-                            TextSpan(text: " ay")
-                          ]),
+                        style: TextStyle(color: Colors.black),
+                        children: [
+                          TextSpan(text: "11", style: TextStyleCon.miniTitle),
+                          TextSpan(text: " ay")
+                        ],
+                      ),
                     ),
                     RichText(
                       text: const TextSpan(
-                          style: TextStyle(color: Colors.black),
-                          children: [
-                            TextSpan(text: "16", style: TextStyleCon.miniTitle),
-                            TextSpan(text: " gün")
-                          ]),
+                        style: TextStyle(color: Colors.black),
+                        children: [
+                          TextSpan(text: "16", style: TextStyleCon.miniTitle),
+                          TextSpan(text: " gün")
+                        ],
+                      ),
                     ),
                   ],
                 ),

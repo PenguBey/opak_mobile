@@ -27,6 +27,7 @@ class YemekListesiWidget extends StatelessWidget {
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Icon(
                   Icons.food_bank_outlined,
@@ -34,21 +35,25 @@ class YemekListesiWidget extends StatelessWidget {
                 ),
                 Expanded(
                   child: SizedBox(
-                    height: 100,
+                    height: 85,
                     child: ListView.builder(
-                      itemCount: 5,
+                      itemCount: 15,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return const Card(
-                          color: ColorCon.backGround,
-                          child: Padding(
-                            padding: EdgeCon.card,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(Icons.dining_outlined),
-                                Text("Yemek Menüsü")
-                              ],
+                        return const SizedBox(
+                          width: 150,
+                          child: Card(
+                            color: ColorCon.backGround,
+                            child: Padding(
+                              padding: EdgeCon.card,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(Icons.dining_outlined),
+                                  Text("Ezogelin Çorbası")
+                                ],
+                              ),
                             ),
                           ),
                         );

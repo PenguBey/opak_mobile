@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
 
 class MaasbilgiRowWidget extends StatelessWidget {
   final IconData icon;
@@ -17,7 +18,7 @@ class MaasbilgiRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: EdgeCon.symlistI,
       child: Row(
         children: [
           Icon(icon, size: 24),
@@ -25,12 +26,11 @@ class MaasbilgiRowWidget extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: const TextStyle(fontSize: 16),
             ),
           ),
           Text(
             amount,
-            style: TextStyle(fontSize: 16, color: amountColor),
+            style: TextStyle(color: amountColor),
           ),
         ],
       ),

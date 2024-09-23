@@ -52,11 +52,12 @@ class DonemselmaasbilgisiCardWidget extends StatelessWidget {
                               style: TextStyleCon.miniTitle,
                             ),
                             Expanded(
-                                flex: 2,
-                                child: Text(
-                                  "783,00TL",
-                                  textAlign: TextAlign.end,
-                                ))
+                              flex: 2,
+                              child: Text(
+                                "783,00TL",
+                                textAlign: TextAlign.end,
+                              ),
+                            )
                           ],
                         ),
                     ],

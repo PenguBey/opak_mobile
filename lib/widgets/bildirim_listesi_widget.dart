@@ -10,29 +10,30 @@ class BildirimListesiWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Card(
-        color: ColorCon.foreGround,
-        child: Padding(
-          padding: EdgeCon.card,
-          child: Column(
-            children: [
-              const Padding(
-                padding: EdgeCon.miniBaslik,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.notifications_none,
-                      size: 50,
-                    ),
-                    Text(
-                      "Bildirimler",
-                      style: TextStyleCon.miniTitle,
-                    )
-                  ],
-                ),
+    return Card(
+      color: ColorCon.foreGround,
+      child: Padding(
+        padding: EdgeCon.card,
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeCon.miniBaslik,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.notifications_none,
+                    size: 50,
+                  ),
+                  Text(
+                    "Bildirimler",
+                    style: TextStyleCon.miniTitle,
+                  )
+                ],
               ),
-              Expanded(
+            ),
+            Expanded(
+              child: SizedBox(
+                height: 100,
                 child: ListView.builder(
                   itemCount: 100,
                   itemBuilder: (context, index) {
@@ -45,9 +46,9 @@ class BildirimListesiWidget extends StatelessWidget {
                     );
                   },
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

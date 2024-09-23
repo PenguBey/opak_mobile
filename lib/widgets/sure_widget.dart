@@ -42,7 +42,7 @@ class SureWidget extends StatelessWidget {
                   ),
                   const Text(
                     "10 Sa. 21 Dk.",
-                    style: TextStyle(color: Colors.red),
+                    style: TextStyle(color: Colors.red, fontSize: 16),
                   )
                 ],
               ),
@@ -58,7 +58,7 @@ class SureWidget extends StatelessWidget {
                           child: Card(
                             color: ColorCon.backGround,
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: EdgeCon.card,
                               child: Text(
                                 "Giriş: 07:45",
                                 textAlign: TextAlign.center,
@@ -71,7 +71,7 @@ class SureWidget extends StatelessWidget {
                           child: Card(
                             color: ColorCon.backGround,
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: EdgeCon.card,
                               child: Text("Çıkış: 18:06",
                                   textAlign: TextAlign.center),
                             ),
