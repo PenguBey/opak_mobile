@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/icon_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 class VardiyaWidget extends StatelessWidget {
@@ -10,7 +12,7 @@ class VardiyaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return Card(
       color: ColorCon.foreGround,
       child: Padding(
         padding: EdgeCon.card,
@@ -18,7 +20,7 @@ class VardiyaWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeCon.miniBaslik,
               child: Text(
                 "Vardiya",
@@ -28,11 +30,11 @@ class VardiyaWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.directions_walk_sharp,
-                  size: 50,
+                SvgPicture.asset(
+                  IconCon.soru,
+                  width: 50,
                 ),
-                Column(
+                const Column(
                   children: [
                     Text(
                       "N0818.Vardiya",

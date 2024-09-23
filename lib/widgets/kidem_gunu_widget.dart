@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/icon_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 class KidemGunuWidget extends StatelessWidget {
@@ -61,9 +63,9 @@ class KidemGunuWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Icon(
-                  Icons.directions_walk_sharp,
-                  size: 50,
+                SvgPicture.asset(
+                  IconCon.takvim,
+                  height: 50,
                 )
               ],
             )
