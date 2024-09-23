@@ -46,7 +46,7 @@ class ProfilePage extends StatelessWidget {
                           fontSize: 14,
                           color: Colors.grey[600],
                         ),
-                        overflow: TextOverflow.ellipsis, // Uzun metinleri kes
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),
@@ -61,7 +61,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      '32.3°C', // Statik hava durumu verisi
+                      '32.3°C',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,

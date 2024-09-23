@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/widgets/maas_bilgileri_widget.dart';
 
 class NewPage extends StatelessWidget {
   @override
@@ -53,25 +54,8 @@ class NewPage extends StatelessWidget {
 
   Widget _buildBilgiRow(
       IconData icon, String title, String amount, Color amountColor) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Row(
-        children: [
-          Icon(icon, size: 24),
-          SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              title,
-              style: TextStyle(fontSize: 16),
-            ),
-          ),
-          Text(
-            amount,
-            style: TextStyle(fontSize: 16, color: amountColor),
-          ),
-        ],
-      ),
-    );
+    return MaasBilgileriWidget(
+        icon: icon, title: title, amount: amount, amountColor: amountColor);
   }
 
   Widget _buildColoredContainer(

@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/MenuPage.dart';
+import 'package:opak_mobile/views/MenuPage.dart';
 import 'package:opak_mobile/views/newpage.dart';
 import 'package:opak_mobile/views/profil_page.dart';
+
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  int _selectedIndex = 0; // Başlangıçta Menü sekmesini seçili göster
+  int _selectedIndex = 0;
 
   final List<Widget> _pages = [
     MenuPage(),
     HomePage(),
-    ProfilePage(), // Profil sayfası
+    ProfilePage(),
   ];
 
   void _onItemTapped(int index) {
@@ -27,7 +28,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: Stack(
-        clipBehavior: Clip.none, // Widget taşmaları için gerekli
+        clipBehavior: Clip.none,
         children: [
           BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
@@ -36,8 +37,7 @@ class _MainPageState extends State<MainPage> {
                 label: 'Menü',
               ),
               BottomNavigationBarItem(
-                icon: SizedBox
-                    .shrink(), // Ortadaki buton için boş bir alan bıraktık
+                icon: SizedBox.shrink(),
                 label: '',
               ),
               BottomNavigationBarItem(
@@ -53,9 +53,8 @@ class _MainPageState extends State<MainPage> {
             type: BottomNavigationBarType.fixed,
           ),
           Positioned(
-            left:
-                (MediaQuery.of(context).size.width - 56) / 2, // Ortalamak için
-            bottom: 6, // Biraz yukarı almak için
+            left: (MediaQuery.of(context).size.width - 56) / 2,
+            bottom: 6,
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
