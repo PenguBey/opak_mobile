@@ -16,6 +16,7 @@ class YemekListesiWidget extends StatelessWidget {
         padding: EdgeCon.card,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
           children: [
             const Padding(
               padding: EdgeCon.miniBaslik,

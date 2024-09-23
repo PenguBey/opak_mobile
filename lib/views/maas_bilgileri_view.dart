@@ -1,7 +1,4 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/constants/color_con.dart';
-import 'package:opak_mobile/constants/edge_con.dart';
 
 import '../widgets/donemsel_maas_grafigi_widget.dart';
 import '../widgets/donemselmaasbilgisi_card_widget.dart';
@@ -19,7 +16,7 @@ class MaasBilgileriView extends StatelessWidget {
       body: const Column(
         children: [
           DonemselmaasbilgisiCardWidget(),
-          Expanded(child: const DonemselMaasGrafigiWidget())
+          Expanded(child: DonemselMaasGrafigiWidget())
         ],
       ),
     );
