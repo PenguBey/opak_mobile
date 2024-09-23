@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
 
@@ -29,11 +30,8 @@ class UserTileWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Hayırlı Günler  \uD83C\uDF24",
-                  ),
-                  Text(
                     "SELMAN KOYUNCU",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                    style: TextStyleCon.title,
                   ),
                   Text("MUHASEBE FİNANS EHİL PERSONELİ")
                 ],
@@ -44,11 +42,11 @@ class UserTileWidget extends StatelessWidget {
               children: [
                 Icon(
                   Icons.wb_sunny_outlined,
-                  size: 45,
+                  size: 50,
                 ),
                 Text(
                   "32.3°C",
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                  style: TextStyleCon.title,
                 )
               ],
             )
