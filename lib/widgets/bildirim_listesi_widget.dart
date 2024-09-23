@@ -10,43 +10,44 @@ class BildirimListesiWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: ColorCon.foreGround,
-      child: Padding(
-        padding: EdgeCon.card,
-        child: Column(
-          children: [
-            const Padding(
-              padding: EdgeCon.miniBaslik,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.notifications_none,
-                    size: 50,
-                  ),
-                  Text(
-                    "Bildirimler",
-                    style: TextStyleCon.miniTitle,
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 140,
-              child: ListView.builder(
-                itemCount: 100,
-                itemBuilder: (context, index) {
-                  return const ListTile(
-                    leading: Icon(
-                      Icons.notifications,
-                      size: 30,
+    return Expanded(
+      child: Card(
+        color: ColorCon.foreGround,
+        child: Padding(
+          padding: EdgeCon.card,
+          child: Column(
+            children: [
+              const Padding(
+                padding: EdgeCon.miniBaslik,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.notifications_none,
+                      size: 50,
                     ),
-                    title: Text("30 Ağustps Bilfilendirmesi HK."),
-                  );
-                },
+                    Text(
+                      "Bildirimler",
+                      style: TextStyleCon.miniTitle,
+                    )
+                  ],
+                ),
               ),
-            )
-          ],
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 100,
+                  itemBuilder: (context, index) {
+                    return const ListTile(
+                      leading: Icon(
+                        Icons.notifications,
+                        size: 30,
+                      ),
+                      title: Text("30 Ağustps Bilfilendirmesi HK."),
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

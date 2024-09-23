@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
 
 import '../widgets/bildirim_listesi_widget.dart';
+import '../widgets/bottom_navigationbar_widget.dart';
 import '../widgets/kidem_gunu_widget.dart';
 import '../widgets/sure_widget.dart';
 import '../widgets/user_tile_widget.dart';
@@ -40,13 +41,7 @@ class MainMenuView extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline_outlined), label: 'profile')
-        ],
-      ),
+      bottomNavigationBar: const BottomNavigationbarWidget(),
     );
   }
 }
