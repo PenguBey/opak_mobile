@@ -23,7 +23,6 @@ class DonemselMaasGrafigiWidget extends StatelessWidget {
             maxY: 35000,
             lineBarsData: [
               LineChartBarData(
-                isCurved: true,
                 belowBarData: BarAreaData(show: true, gradient: ColorCon.chart),
                 barWidth: 6,
                 spots: [
