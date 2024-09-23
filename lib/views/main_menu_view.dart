@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/constants/edge_con.dart';
-
 import '../widgets/bildirim_listesi_widget.dart';
 import '../widgets/bottom_navigationbar_widget.dart';
 import '../widgets/kidem_gunu_widget.dart';
@@ -17,7 +15,6 @@ class MainMenuView extends StatelessWidget {
     return Scaffold(
       body: const Column(
         children: [
-          EdgeCon.edgeSizedTop,
           UserTileWidget(),
           IntrinsicHeight(
             child: Row(

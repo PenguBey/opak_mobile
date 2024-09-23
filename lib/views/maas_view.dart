@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/constants/color_con.dart';
-import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/widgets/basit_bilgialan_wiget.dart';
 
 class MaasView extends StatelessWidget {
