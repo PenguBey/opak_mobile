@@ -21,8 +21,9 @@ class BildirimListesiWidget extends StatelessWidget {
               child: Row(
                 children: [
                   Icon(
-                    Icons.notifications_none,
+                    Icons.notifications,
                     size: 50,
+                    color: ColorCon.takvim,
                   ),
                   Text(
                     "Bildirimler",

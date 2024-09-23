@@ -42,8 +42,9 @@ class UserTileWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.wb_sunny_outlined,
+                  Icons.wb_sunny,
                   size: 50,
+                  color: ColorCon.gunes,
                 ),
                 Text(
                   "32.3°C",

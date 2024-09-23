@@ -16,7 +16,6 @@ class YemekListesiWidget extends StatelessWidget {
         padding: EdgeCon.card,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
           children: [
             const Padding(
               padding: EdgeCon.miniBaslik,
@@ -27,33 +26,29 @@ class YemekListesiWidget extends StatelessWidget {
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Icon(
-                  Icons.food_bank_outlined,
+                  Icons.fastfood_rounded,
                   size: 50,
+                  color: ColorCon.gunes,
                 ),
                 Expanded(
                   child: SizedBox(
-                    height: 85,
+                    height: 100,
                     child: ListView.builder(
-                      itemCount: 15,
+                      itemCount: 5,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return const SizedBox(
-                          width: 150,
-                          child: Card(
-                            color: ColorCon.backGround,
-                            child: Padding(
-                              padding: EdgeCon.card,
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Icon(Icons.dining_outlined),
-                                  Text("Ezogelin Çorbası")
-                                ],
-                              ),
+                        return const Card(
+                          color: ColorCon.backGround,
+                          child: Padding(
+                            padding: EdgeCon.card,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Icon(Icons.dining_outlined),
+                                Text("Yemek Menüsü")
+                              ],
                             ),
                           ),
                         );

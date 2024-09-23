@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:opak_mobile/constants/icon_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
@@ -11,7 +13,7 @@ class BasitBilgialanWiget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return Card(
       color: ColorCon.foreGround,
       child: Padding(
         padding: EdgeCon.card,
@@ -21,14 +23,14 @@ class BasitBilgialanWiget extends StatelessWidget {
           children: [
             Column(
               children: [
-                Expanded(child: SizedBox()),
-                Icon(
-                  Icons.directions_walk_sharp,
-                  size: 60,
-                ),
+                const Expanded(child: const SizedBox()),
+                SvgPicture.asset(
+                  IconCon.takvim,
+                  height: 75,
+                )
               ],
             ),
-            Expanded(
+            const Expanded(
               child: Text(
                 "Dönemsel Maaş Bilgileri",
                 textAlign: TextAlign.right,
