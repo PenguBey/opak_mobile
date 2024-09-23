@@ -34,7 +34,6 @@ class BasitBilgialanWiget extends StatelessWidget {
               child: Text(
                 "Dönemsel Maaş Bilgileri",
                 textAlign: TextAlign.right,
-                style: TextStyleCon.miniTitle,
               ),
             ),
           ],

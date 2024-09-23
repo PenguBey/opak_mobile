@@ -22,6 +22,10 @@ class BasitBilgistackWidget extends StatelessWidget {
             child: Padding(
               padding: EdgeCon.card,
               child: Icon(icon, size: 48.0, color: color),
+              /*SvgPicture.asset(
+                IconCon.takvim,
+                height: 75,
+              ),*/
             ),
           ),
           Align(
