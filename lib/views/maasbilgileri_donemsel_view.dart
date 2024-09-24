@@ -10,10 +10,6 @@ class MaasbilgileriDonemselView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Maaş Bilgileri'),
-        leading: const Icon(Icons.arrow_back),
-        actions: const [
-          Icon(Icons.info_outline),
-        ],
       ),
       body: const Padding(
         padding: EdgeInsets.all(16.0),
