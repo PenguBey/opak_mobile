@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:opak_mobile/constants/icon_con.dart';
-import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
 import '../constants/edge_con.dart';
@@ -23,10 +22,10 @@ class BasitBilgialanWiget extends StatelessWidget {
           children: [
             Column(
               children: [
-                const Expanded(child: const SizedBox()),
+                const Expanded(child:  SizedBox()),
                 SvgPicture.asset(
                   IconCon.takvim,
-                  height: 75,
+                  height: 50,
                 )
               ],
             ),

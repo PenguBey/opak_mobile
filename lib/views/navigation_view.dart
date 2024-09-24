@@ -27,7 +27,7 @@ class NavigationView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("AnaMenü"),
+              child: const Text("Ömer AnaMenü"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -40,7 +40,7 @@ class NavigationView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("Maas"),
+              child: const Text("Ömer Maas"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -53,7 +53,7 @@ class NavigationView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("Maaş Bilgileri"),
+              child: const Text("Ömer Maaş Bilgileri"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -66,7 +66,7 @@ class NavigationView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("Efe Baba Pro 1"),
+              child: const Text("Efe Menu"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -79,7 +79,7 @@ class NavigationView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("Efe Baba Pro 22"),
+              child: const Text("Efe Donemsel Maas"),
             ),
             ElevatedButton(
               onPressed: () {
@@ -92,7 +92,7 @@ class NavigationView extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text("Efe Baba Pro 333"),
+              child: const Text("Efe Maas Bilgileri"),
             ),
           ],
         ),
