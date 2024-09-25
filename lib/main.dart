@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:opak_mobile/constants/color_con.dart';
-import 'package:opak_mobile/views/navigation_view.dart';
+import 'package:opak_mobile/constants/pageroute_con.dart';
 
 void main() {
-
   runApp(const MyApp());
 }
 
@@ -20,7 +19,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: ColorCon.backGround,
         useMaterial3: true,
       ),
-      home: const NavigationView(),
+      initialRoute: '/navigation',
+      getPages: PagerouteCon.getPage,
+      unknownRoute: PagerouteCon.unknownRoute,
     );
   }
 }
