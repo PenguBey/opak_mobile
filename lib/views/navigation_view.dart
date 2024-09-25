@@ -61,7 +61,7 @@ class NavigationView extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const MenuView();
+                      return MenuView();
                     },
                   ),
                 );
@@ -74,7 +74,7 @@ class NavigationView extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const ProfilView();
+                      return ProfilView();
                     },
                   ),
                 );

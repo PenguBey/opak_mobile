@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/widgets/basit_bilgistack_widget.dart';
 import 'package:opak_mobile/widgets/bottomnavigation_bar_widget.dart';
 import 'package:opak_mobile/widgets/user_tile_widget.dart';
 
+import '../constants/icon_con.dart';
+import '../widgets/basit_bilgialan_wiget.dart';
+
 class ProfilView extends StatelessWidget {
-  const ProfilView({super.key});
+  ProfilView({super.key});
+  var test = {
+    'Ayarlar': IconCon.chat,
+    'Durum': IconCon.chat,
+    'Denetim': IconCon.onlineDiscussion,
+    'Control': IconCon.onlineCalendar,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +22,15 @@ class ProfilView extends StatelessWidget {
           const UserTileWidget(),
           const SizedBox(height: 20),
           Expanded(
-            child: GridView.count(
-              padding: const EdgeInsets.all(8.0),
-              crossAxisCount: 2,
-              children: const <Widget>[
-                BasitBilgistackWidget(
-                    icon: Icons.person,
-                    color: Colors.indigo,
-                    title: 'Özlük Bilgileri'),
-                BasitBilgistackWidget(
-                    icon: Icons.work,
-                    color: Colors.green,
-                    title: 'Görev Tanımı'),
-                BasitBilgistackWidget(
-                    icon: Icons.info, color: Colors.blue, title: 'Hakkında'),
-                BasitBilgistackWidget(
-                    icon: Icons.settings, color: Colors.grey, title: 'Ayarlar'),
-              ],
+            child: GridView.builder(
+              itemCount: test.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, childAspectRatio: 1.5),
+              itemBuilder: (context, index) {
+                return BasitBilgialanWiget(
+                    string: test.keys.elementAt(index),
+                    iconData: test.values.elementAt(index));
+              },
             ),
           ),
         ],
