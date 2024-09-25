@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:opak_mobile/constants/icon_con.dart';
+import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
 import '../constants/edge_con.dart';
 
 class BasitBilgialanWiget extends StatelessWidget {
+  final String string;
+  final String iconData;
   const BasitBilgialanWiget({
     super.key,
+    required this.string,
+    required this.iconData,
   });
 
   @override
@@ -22,17 +26,18 @@ class BasitBilgialanWiget extends StatelessWidget {
           children: [
             Column(
               children: [
-                const Expanded(child:  SizedBox()),
+                const Expanded(child: SizedBox()),
                 SvgPicture.asset(
-                  IconCon.takvim,
-                  height: 50,
+                  iconData,
+                  height: 60,
                 )
               ],
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                "Dönemsel Maaş Bilgileri",
+                string,
                 textAlign: TextAlign.right,
+                style: TextStyleCon.miniTitle,
               ),
             ),
           ],
