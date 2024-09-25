@@ -38,7 +38,6 @@ class VardiyaWidget extends StatelessWidget {
                   children: [
                     Text(
                       "N0818.Vardiya",
-                      style: TextStyleCon.miniTitle,
                     ),
                     Text("08:00 - 18:00"),
                   ],
