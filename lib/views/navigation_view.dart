@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:opak_mobile/views/maas_bilgileri_view.dart';
 import 'package:opak_mobile/views/maas_view.dart';
 import 'package:opak_mobile/views/maasbilgileri_donemsel_view.dart';
@@ -6,7 +7,9 @@ import 'package:opak_mobile/views/main_menu_view.dart';
 import 'package:opak_mobile/views/menu_view.dart';
 import 'package:opak_mobile/views/profil_view.dart';
 
-class NavigationView extends StatelessWidget {
+import '../controllers/navigation_controller.dart';
+
+class NavigationView extends GetView<NavigationController> {
   const NavigationView({super.key});
 
   @override
@@ -35,7 +38,7 @@ class NavigationView extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return MaasView();
+                      return const MaasView();
                     },
                   ),
                 );
@@ -61,7 +64,7 @@ class NavigationView extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return MenuView();
+                      return const MenuView();
                     },
                   ),
                 );
@@ -74,7 +77,7 @@ class NavigationView extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return ProfilView();
+                      return const ProfilView();
                     },
                   ),
                 );
