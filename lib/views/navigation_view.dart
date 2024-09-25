@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/views/maas_bilgileri_view.dart';
-import 'package:opak_mobile/views/maas_view.dart';
-import 'package:opak_mobile/views/maasbilgileri_donemsel_view.dart';
-import 'package:opak_mobile/views/main_menu_view.dart';
-import 'package:opak_mobile/views/menu_view.dart';
-import 'package:opak_mobile/views/profil_view.dart';
+import 'package:get/get.dart';
 
-class NavigationView extends StatelessWidget {
+import '../controllers/navigation_controller.dart';
+
+class NavigationView extends GetView<NavigationController> {
   const NavigationView({super.key});
 
   @override
@@ -18,79 +15,37 @@ class NavigationView extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const MainMenuView();
-                    },
-                  ),
-                );
+                Get.toNamed('/main_menu');
               },
               child: const Text("Ömer AnaMenü"),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return MaasView();
-                    },
-                  ),
-                );
+                Get.toNamed('/maas');
               },
               child: const Text("Ömer Maas"),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const MaasBilgileriView();
-                    },
-                  ),
-                );
+                Get.toNamed('/maas_bilgileri');
               },
               child: const Text("Ömer Maaş Bilgileri"),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return MenuView();
-                    },
-                  ),
-                );
+                Get.toNamed('/menu_1');
               },
               child: const Text("Efe Menu"),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return ProfilView();
-                    },
-                  ),
-                );
+                Get.toNamed('/profil');
               },
               child: const Text("Efe Donemsel Maas"),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const MaasbilgileriDonemselView();
-                    },
-                  ),
-                );
+                Get.toNamed('/maasbilgileri_donemsel');
               },
               child: const Text("Efe Maas Bilgileri"),
             ),
