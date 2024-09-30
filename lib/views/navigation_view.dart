@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:opak_mobile/widgets/tanitim_card_widget.dart';
 import '../controllers/navigation_controller.dart';
 
 class NavigationView extends GetView<NavigationController> {
@@ -10,45 +10,42 @@ class NavigationView extends GetView<NavigationController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          padding: const EdgeInsets.all(16),
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed('/main_menu');
-              },
-              child: const Text("Ömer AnaMenü"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed('/maas');
-              },
-              child: const Text("Ömer Maas"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed('/maas_bilgileri');
-              },
-              child: const Text("Ömer Maaş Bilgileri"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed('/menu_1');
-              },
-              child: const Text("Efe Menu"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed('/profil');
-              },
-              child: const Text("Efe Donemsel Maas"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Get.toNamed('/maasbilgileri_donemsel');
-              },
-              child: const Text("Efe Maas Bilgileri"),
-            ),
+            TanitimCardWidget(
+                context: context,
+                route: '/main_menu',
+                title: "Ana menü  ",
+                icon: Icons.home),
+            TanitimCardWidget(
+                context: context,
+                route: '/maas',
+                title: "Maaş",
+                icon: Icons.attach_money),
+            TanitimCardWidget(
+                context: context,
+                route: '/maas_bilgileri',
+                title: "Maaş Bilgileri",
+                icon: Icons.info),
+            TanitimCardWidget(
+                context: context,
+                route: '/menu_1',
+                title: "Menü",
+                icon: Icons.menu),
+            TanitimCardWidget(
+                context: context,
+                route: '/profil',
+                title: "Dönemsel Maaş",
+                icon: Icons.person),
+            TanitimCardWidget(
+                context: context,
+                route: '/maasbilgileri_donemsel',
+                title: "Maaş Bilgileri",
+                icon: Icons.history),
           ],
         ),
       ),
