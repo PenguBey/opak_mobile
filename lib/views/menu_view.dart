@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/widgets/basit_bilgialan_wiget.dart';
 
 import '../controllers/menu_1controller.dart';
@@ -12,18 +13,22 @@ class MenuView extends GetView<Menu1Controller> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Menü'),
+        centerTitle: true,
       ),
-      body: GridView.builder(
-        itemCount: controller.menuler.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 1.5),
-        itemBuilder: (context, index) {
-          return BasitBilgialanWiget(
-              string: controller.menuler[index][0],
-              iconData: controller.menuler[index][1],
-              route: controller.menuler[index][2],
-              remove: controller.menuler[index][3]);
-        },
+      body: Container(
+        decoration: ColorCon.backGradient,
+        child: GridView.builder(
+          itemCount: controller.menuler.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, childAspectRatio: 1.5),
+          itemBuilder: (context, index) {
+            return BasitBilgialanWiget(
+                string: controller.menuler[index][0],
+                iconData: controller.menuler[index][1],
+                route: controller.menuler[index][2],
+                remove: controller.menuler[index][3]);
+          },
+        ),
       ),
     );
   }

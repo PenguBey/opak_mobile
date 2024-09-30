@@ -38,16 +38,12 @@ class BildirimListesiWidget extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: bildirimler.length,
                   itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        ListTile(
-                          leading: const Icon(
-                            Icons.notifications,
-                          ),
-                          title: Text(bildirimler[index]),
-                        ),
-                        const Divider()
-                      ],
+                    return ListTile(
+                      hoverColor: ColorCon.backGround,
+                      leading: const Icon(
+                        Icons.notifications,
+                      ),
+                      title: Text(bildirimler[index]),
                     );
                   },
                 ),

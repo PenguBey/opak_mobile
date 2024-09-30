@@ -18,6 +18,7 @@ class AnaMenuView extends GetView<AnaMenuController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ana Sayfa'),
+        centerTitle: true,
       ),
       body: Container(
         decoration: ColorCon.backGradient,

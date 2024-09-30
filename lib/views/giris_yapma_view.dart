@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 
 class GirisYapmaView extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();
@@ -17,16 +18,7 @@ class GirisYapmaView extends StatelessWidget {
         elevation: 4,
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 0, 0, 0),
-              Colors.lightBlueAccent
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
+        decoration: ColorCon.backGradient,
         padding: const EdgeInsets.all(16.0),
         child: Center(
           child: SingleChildScrollView(

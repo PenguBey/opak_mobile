@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 
 import '../controllers/maas_bilgileri_controller.dart';
 import '../widgets/donemsel_maas_grafigi_widget.dart';
@@ -15,11 +16,14 @@ class MaasBilgileriView extends GetView<MaasBilgileriController> {
         centerTitle: true,
         title: const Text("Dönemsel Maaş Bilgileri"),
       ),
-      body: Column(
-        children: [
-          DonemselmaasbilgisiCardWidget(maaslar: controller.maaslar),
-          const Expanded(child: DonemselMaasGrafigiWidget())
-        ],
+      body: Container(
+        decoration: ColorCon.backGradient,
+        child: Column(
+          children: [
+            DonemselmaasbilgisiCardWidget(maaslar: controller.maaslar),
+            const Expanded(child: DonemselMaasGrafigiWidget())
+          ],
+        ),
       ),
     );
   }

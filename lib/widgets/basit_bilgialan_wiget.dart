@@ -42,7 +42,7 @@ class BasitBilgialanWiget extends StatelessWidget {
                   const Expanded(child: SizedBox()),
                   SvgPicture.asset(
                     iconData,
-                    height: 60,
+                    height: 50,
                   )
                 ],
               ),
