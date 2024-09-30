@@ -19,7 +19,7 @@ class MaasbilgileriDonemselView extends GetView<MaasBilgileriController> {
       ),
       body: Container(
         decoration: ColorCon.backGradient,
-        child: Card(
+        child: const Card(
           color: ColorCon.foreGround,
           child: Padding(
             padding: EdgeCon.card,
