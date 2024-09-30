@@ -17,8 +17,8 @@ class MainMenuView extends GetView<MainMenuController> {
     return Scaffold(
       body: Column(
         children: [
-          UserTileWidget(),
-          IntrinsicHeight(
+          const UserTileWidget(),
+          const IntrinsicHeight(
             child: Row(
               children: [
                 Expanded(
@@ -30,14 +30,14 @@ class MainMenuView extends GetView<MainMenuController> {
               ],
             ),
           ),
-          SureWidget(),
+          const SureWidget(),
           YemekListesiWidget(
             menuler: controller.menuler,
           ),
-          Expanded(child: BildirimListesiWidget())
+          const Expanded(child: BildirimListesiWidget())
         ],
       ),
-      bottomNavigationBar: BottomnavigationBarWidget(),
+      bottomNavigationBar: const BottomnavigationBarWidget(),
     );
   }
 }

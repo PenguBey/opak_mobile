@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 
 class TanitimCardWidget extends StatelessWidget {
   const TanitimCardWidget({
@@ -22,6 +23,7 @@ class TanitimCardWidget extends StatelessWidget {
         Get.toNamed(route);
       },
       child: Card(
+        color: ColorCon.foreGround,
         elevation: 4,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
