@@ -17,10 +17,10 @@ class GirisYapmaView extends StatelessWidget {
         elevation: 4,
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              const Color.fromARGB(255, 0, 0, 0),
+              Color.fromARGB(255, 0, 0, 0),
               Colors.lightBlueAccent
             ],
             begin: Alignment.topLeft,

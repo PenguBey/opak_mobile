@@ -11,6 +11,10 @@ class AnaMenuController extends GetxController {
   };
   var bildirimler = [
     '30 ağustos bilgilendirmesi',
+    'Abdullah Karakuş röportaj yayımı',
+    '30 ağustos bilgilendirmesi',
+    'Abdullah Karakuş röportaj yayımı',
+    '30 ağustos bilgilendirmesi',
     'Abdullah Karakuş röportaj yayımı'
   ];
 }

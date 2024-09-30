@@ -12,4 +12,14 @@ class ColorCon {
     Color.fromRGBO(33, 149, 243, 0.5),
     Color.fromRGBO(33, 149, 243, 0.2)
   ]);
+
+  static const backGradient = BoxDecoration(
+      gradient: LinearGradient(
+    colors: [
+      Color.fromARGB(255, 0, 0, 0),
+      Colors.lightBlueAccent,
+    ],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  ));
 }
