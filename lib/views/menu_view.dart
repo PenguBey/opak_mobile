@@ -10,7 +10,9 @@ class MenuView extends GetView<Menu1Controller> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Menü'),
+      ),
       body: GridView.builder(
         itemCount: controller.menuler.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

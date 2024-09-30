@@ -31,37 +31,9 @@ class KidemGunuWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    RichText(
-                      text: const TextSpan(
-                        style: TextStyle(color: Colors.black),
-                        children: [
-                          TextSpan(text: "1", style: TextStyleCon.miniTitle),
-                          TextSpan(text: " yıl")
-                        ],
-                      ),
-                    ),
-                    RichText(
-                      text: const TextSpan(
-                        style: TextStyle(color: Colors.black),
-                        children: [
-                          TextSpan(text: "11", style: TextStyleCon.miniTitle),
-                          TextSpan(text: " ay")
-                        ],
-                      ),
-                    ),
-                    RichText(
-                      text: const TextSpan(
-                        style: TextStyle(color: Colors.black),
-                        children: [
-                          TextSpan(text: "16", style: TextStyleCon.miniTitle),
-                          TextSpan(text: " gün")
-                        ],
-                      ),
-                    ),
-                  ],
+                  children: [Text('1 yıl'), Text('11 ay'), Text('16 gün')],
                 ),
                 SvgPicture.asset(
                   IconCon.takvim,

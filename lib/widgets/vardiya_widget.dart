@@ -34,13 +34,15 @@ class VardiyaWidget extends StatelessWidget {
                   IconCon.soru,
                   width: 50,
                 ),
-                const Column(
-                  children: [
-                    Text(
-                      "N0818.Vardiya",
-                    ),
-                    Text("08:00 - 18:00"),
-                  ],
+                const Expanded(
+                  child: Column(
+                    children: [
+                      Text(
+                        "N0818.Vardiya",
+                      ),
+                      Text("08:00 - 18:00"),
+                    ],
+                  ),
                 )
               ],
             )

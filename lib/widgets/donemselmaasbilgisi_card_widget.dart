@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/icon_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 class DonemselmaasbilgisiCardWidget extends StatelessWidget {
@@ -28,11 +30,11 @@ class DonemselmaasbilgisiCardWidget extends StatelessWidget {
             ),
             Row(
               children: [
-                const Expanded(
+                Expanded(
                     flex: 1,
-                    child: Icon(
-                      Icons.directions_walk_sharp,
-                      size: 70,
+                    child: SvgPicture.asset(
+                      IconCon.payments,
+                      height: 70,
                     )),
                 Expanded(
                   flex: 2,
@@ -45,19 +47,18 @@ class DonemselmaasbilgisiCardWidget extends StatelessWidget {
                               flex: 3,
                               child: Text(
                                 item[0],
-                                style: TextStyleCon.miniTitle,
                               ),
                             ),
                             const Text(
                               "-",
                               textAlign: TextAlign.end,
-                              style: TextStyleCon.miniTitle,
                             ),
                             Expanded(
                               flex: 2,
                               child: Text(
                                 item[1],
                                 textAlign: TextAlign.end,
+                                style: const TextStyle(color: Colors.green),
                               ),
                             )
                           ],

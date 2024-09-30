@@ -18,7 +18,6 @@ class ProfilView extends GetView<ProfilController> {
       body: Column(
         children: <Widget>[
           const UserTileWidget(),
-          const SizedBox(height: 20),
           Expanded(
             child: GridView.builder(
               itemCount: controller.menuler.length,
