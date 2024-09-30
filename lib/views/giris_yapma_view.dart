@@ -18,7 +18,16 @@ class GirisYapmaView extends StatelessWidget {
         elevation: 4,
       ),
       body: Container(
-        decoration: ColorCon.backGradient,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.blue,
+              Colors.lightBlue,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
         padding: const EdgeInsets.all(16.0),
         child: Center(
           child: SingleChildScrollView(

@@ -14,12 +14,13 @@ class ColorCon {
   ]);
 
   static const backGradient = BoxDecoration(
-      gradient: LinearGradient(
-    colors: [
-      Colors.blue,
-      Colors.lightBlue,
-    ],
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-  ));
+    gradient: LinearGradient(
+      colors: [
+        Colors.white,
+        Colors.white,
+      ],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
+  );
 }

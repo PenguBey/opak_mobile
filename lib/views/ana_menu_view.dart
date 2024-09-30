@@ -17,7 +17,7 @@ class AnaMenuView extends GetView<AnaMenuController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ana Sayfa'),
+        toolbarHeight: 0,
         centerTitle: true,
       ),
       body: Container(
