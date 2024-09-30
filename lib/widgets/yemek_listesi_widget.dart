@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 class YemekListesiWidget extends StatelessWidget {
+  final Map<String, String> menuler;
   const YemekListesiWidget({
     super.key,
+    required this.menuler,
   });
 
   @override
@@ -25,7 +28,7 @@ class YemekListesiWidget extends StatelessWidget {
               ),
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Icon(
                   Icons.fastfood_rounded,
@@ -36,18 +39,22 @@ class YemekListesiWidget extends StatelessWidget {
                   child: SizedBox(
                     height: 100,
                     child: ListView.builder(
-                      itemCount: 5,
+                      itemCount: menuler.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return const Card(
+                        return Card(
                           color: ColorCon.backGround,
-                          child: Padding(
+                          child: Container(
+                            width: 120,
                             padding: EdgeCon.card,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Icon(Icons.dining_outlined),
-                                Text("Yemek Menüsü")
+                                Text(menuler.keys.elementAt(index)),
+                                SvgPicture.asset(
+                                  menuler.values.elementAt(index),
+                                  height: 40,
+                                ),
                               ],
                             ),
                           ),

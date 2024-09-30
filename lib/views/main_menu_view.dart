@@ -14,7 +14,7 @@ class MainMenuView extends GetView<MainMenuController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
           UserTileWidget(),
@@ -31,7 +31,9 @@ class MainMenuView extends GetView<MainMenuController> {
             ),
           ),
           SureWidget(),
-          YemekListesiWidget(),
+          YemekListesiWidget(
+            menuler: controller.menuler,
+          ),
           Expanded(child: BildirimListesiWidget())
         ],
       ),

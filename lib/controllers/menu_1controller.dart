@@ -4,11 +4,13 @@ import '../constants/icon_con.dart';
 
 class Menu1Controller extends GetxController {
   var test = {
-    'deneme': IconCon.chat,
-    'test': IconCon.chat,
-    'test test': IconCon.onlineDiscussion,
-    'test12as': IconCon.onlineCalendar,
-    'gkairslj asdfh': IconCon.mobileMarketing,
-    'sdiajlk adjieakr': IconCon.questions,
+    'Maaş': IconCon.chat,
+    'Giriş Çıkış Hareketleri': IconCon.chat,
+    'İzin': IconCon.onlineDiscussion,
+    'Zimmet': IconCon.onlineCalendar,
+    'Servis': IconCon.mola,
+    'Haberler': IconCon.messageSent,
+    'Anketler': IconCon.marketing,
+    'Talimatlar': IconCon.fileSync,
   };
 }
