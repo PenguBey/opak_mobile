@@ -47,54 +47,30 @@ class SureWidget extends StatelessWidget {
                 ],
               ),
             ),
-            const IntrinsicHeight(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          width: 1000,
-                          child: Card(
-                            color: ColorCon.backGround,
-                            child: Padding(
-                              padding: EdgeCon.card,
-                              child: Text(
-                                "Giriş: 07:45",
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 1000,
-                          child: Card(
-                            color: ColorCon.backGround,
-                            child: Padding(
-                              padding: EdgeCon.card,
-                              child: Text("Çıkış: 18:06",
-                                  textAlign: TextAlign.center),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Card(
-                      color: ColorCon.backGround,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text("Net Süre"),
-                          Text("9 Sa."),
-                        ],
+            const Row(
+              children: [
+                Expanded(
+                  child: Card(
+                    color: ColorCon.backGround,
+                    child: Padding(
+                      padding: EdgeCon.card,
+                      child: Text(
+                        "Giriş: 07:45",
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
-                  Expanded(child: SizedBox())
-                ],
-              ),
+                ),
+                Expanded(
+                  child: Card(
+                    color: ColorCon.backGround,
+                    child: Padding(
+                      padding: EdgeCon.card,
+                      child: Text("Çıkış: 18:06", textAlign: TextAlign.center),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

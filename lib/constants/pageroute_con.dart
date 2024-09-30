@@ -5,16 +5,14 @@ import 'package:opak_mobile/views/giris_yapma_view.dart';
 import '../controllers/maas_bilgileri_controller.dart';
 import '../controllers/maas_controller.dart';
 import '../controllers/maasbilgileri_donemsel_controller.dart';
-import '../controllers/main_menu_controller.dart';
+import '../controllers/ana_menu_controller.dart';
 import '../controllers/menu_1controller.dart';
-import '../controllers/navigation_controller.dart';
 import '../controllers/profil_controller.dart';
 import '../views/maas_bilgileri_view.dart';
 import '../views/maas_view.dart';
 import '../views/maasbilgileri_donemsel_view.dart';
-import '../views/main_menu_view.dart';
+import '../views/ana_menu_view.dart';
 import '../views/menu_view.dart';
-import '../views/navigation_view.dart';
 import '../views/profil_view.dart';
 
 class PagerouteCon {
@@ -43,9 +41,9 @@ class PagerouteCon {
     ),
     GetPage(
       name: '/main_menu',
-      page: () => const MainMenuView(),
+      page: () => const AnaMenuView(),
       binding: BindingsBuilder(() {
-        Get.lazyPut<MainMenuController>(() => MainMenuController());
+        Get.lazyPut<AnaMenuController>(() => AnaMenuController());
       }),
     ),
     GetPage(
@@ -53,13 +51,6 @@ class PagerouteCon {
       page: () => const MenuView(),
       binding: BindingsBuilder(() {
         Get.lazyPut<Menu1Controller>(() => Menu1Controller());
-      }),
-    ),
-    GetPage(
-      name: '/navigation',
-      page: () => const NavigationView(),
-      binding: BindingsBuilder(() {
-        Get.lazyPut<NavigationController>(() => NavigationController());
       }),
     ),
     GetPage(

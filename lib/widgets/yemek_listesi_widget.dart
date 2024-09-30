@@ -27,43 +27,31 @@ class YemekListesiWidget extends StatelessWidget {
                 style: TextStyleCon.miniTitle,
               ),
             ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.fastfood_rounded,
-                  size: 50,
-                  color: ColorCon.gunes,
-                ),
-                Expanded(
-                  child: SizedBox(
-                    height: 100,
-                    child: ListView.builder(
-                      itemCount: menuler.length,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Card(
-                          color: ColorCon.backGround,
-                          child: Container(
-                            width: 120,
-                            padding: EdgeCon.card,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(menuler.keys.elementAt(index)),
-                                SvgPicture.asset(
-                                  menuler.values.elementAt(index),
-                                  height: 40,
-                                ),
-                              ],
-                            ),
+            SizedBox(
+              height: 100,
+              child: ListView.builder(
+                itemCount: menuler.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Card(
+                    color: ColorCon.backGround,
+                    child: Container(
+                      width: 120,
+                      padding: EdgeCon.card,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(menuler.keys.elementAt(index)),
+                          SvgPicture.asset(
+                            menuler.values.elementAt(index),
+                            height: 40,
                           ),
-                        );
-                      },
+                        ],
+                      ),
                     ),
-                  ),
-                ),
-              ],
+                  );
+                },
+              ),
             )
           ],
         ),

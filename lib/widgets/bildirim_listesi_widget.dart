@@ -4,8 +4,10 @@ import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 class BildirimListesiWidget extends StatelessWidget {
+  final List<String> bildirimler;
   const BildirimListesiWidget({
     super.key,
+    required this.bildirimler,
   });
 
   @override
@@ -22,7 +24,6 @@ class BildirimListesiWidget extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.notifications,
-                    size: 50,
                     color: ColorCon.takvim,
                   ),
                   Text(
@@ -36,14 +37,13 @@ class BildirimListesiWidget extends StatelessWidget {
               child: SizedBox(
                 height: 100,
                 child: ListView.builder(
-                  itemCount: 100,
+                  itemCount: bildirimler.length,
                   itemBuilder: (context, index) {
-                    return const ListTile(
-                      leading: Icon(
+                    return ListTile(
+                      leading: const Icon(
                         Icons.notifications,
-                        size: 30,
                       ),
-                      title: Text("30 Ağustps Bilfilendirmesi HK."),
+                      title: Text(bildirimler[index]),
                     );
                   },
                 ),
