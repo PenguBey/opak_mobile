@@ -33,20 +33,29 @@ class BildirimListesiWidget extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: SizedBox(
-                height: 100,
-                child: ListView.builder(
-                  itemCount: bildirimler.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      hoverColor: ColorCon.backGround,
-                      leading: const Icon(
-                        Icons.notifications,
-                      ),
-                      title: Text(bildirimler[index]),
-                    );
-                  },
-                ),
+              child: ListView.builder(
+                itemCount: bildirimler.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 4.0),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.notifications,
+                          size: 15,
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          bildirimler[index],
+                          style: const TextStyle(fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
             )
           ],

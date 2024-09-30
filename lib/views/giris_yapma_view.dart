@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:opak_mobile/constants/color_con.dart';
 
 class GirisYapmaView extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();
@@ -12,10 +11,10 @@ class GirisYapmaView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Giriş Sayfası'),
+        toolbarHeight: 0,
+        scrolledUnderElevation: 0.0,
+        backgroundColor: Colors.white,
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(136, 255, 255, 255),
-        elevation: 4,
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -70,7 +69,7 @@ class GirisYapmaView extends StatelessWidget {
                     Get.offNamed('/main_menu');
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(136, 255, 255, 255),
+                    backgroundColor: const Color.fromARGB(134, 87, 87, 87),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 15),
                     shape: RoundedRectangleBorder(
@@ -79,8 +78,7 @@ class GirisYapmaView extends StatelessWidget {
                     elevation: 5,
                   ),
                   child: const Text('Giriş Yap',
-                      style: TextStyle(
-                          fontSize: 18, color: Color.fromARGB(179, 0, 0, 0))),
+                      style: TextStyle(fontSize: 18, color: Colors.white)),
                 ),
                 const SizedBox(height: 20),
                 TextButton(

@@ -18,6 +18,8 @@ class AnaMenuView extends GetView<AnaMenuController> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
+        scrolledUnderElevation: 0.0,
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
       body: Container(
