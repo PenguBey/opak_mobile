@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: ColorCon.backGround,
         useMaterial3: true,
       ),
-      initialRoute: '/navigation',
+      initialRoute: '/giris',
       getPages: PagerouteCon.getPage,
       unknownRoute: PagerouteCon.unknownRoute,
     );

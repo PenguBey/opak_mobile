@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:opak_mobile/widgets/giris_yapma_widget.dart';
 
 import '../controllers/maas_bilgileri_controller.dart';
 import '../controllers/maas_controller.dart';
@@ -66,6 +67,13 @@ class PagerouteCon {
       page: () => const ProfilView(),
       binding: BindingsBuilder(() {
         Get.lazyPut<ProfilController>(() => ProfilController());
+      }),
+    ),
+    GetPage(
+      name: '/giris',
+      page: () => LoginPage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<LoginPage>(() => LoginPage());
       }),
     )
   ];
