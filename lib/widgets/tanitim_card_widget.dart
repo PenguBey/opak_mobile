@@ -47,7 +47,7 @@ class TanitimCardWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
-                  textAlign: TextAlign.right,
+                  textAlign: TextAlign.center,
                 ),
               ),
             ],
