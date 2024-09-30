@@ -23,4 +23,8 @@ class IconCon {
   static const String scooter = "${_loc}undraw_scooter_re_lrsb.svg";
   static const String transferFiles =
       "${_loc}undraw_transfer_files_re_a2a9.svg";
+  static const String pilav = "${_loc}rice_3014477.svg";
+  static const String salata = "${_loc}salad_3390280.svg";
+
+  static const String corba = "${_loc}soup_6978178.svg";
 }
