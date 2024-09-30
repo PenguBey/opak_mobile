@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
-import 'package:opak_mobile/constants/text_style_con.dart';
 
 class YemekListesiWidget extends StatelessWidget {
   final Map<String, String> menuler;
@@ -22,9 +21,17 @@ class YemekListesiWidget extends StatelessWidget {
           children: [
             const Padding(
               padding: EdgeCon.miniBaslik,
-              child: Text(
-                "Yemek Listesi",
-                style: TextStyleCon.miniTitle,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.notifications,
+                    color: ColorCon.yemek,
+                  ),
+                  Text(
+                    "Yemek Listesi",
+                    style: TextStyle(color: Color.fromARGB(255, 209, 143, 45), fontSize: 16),
+                  )
+                ],
               ),
             ),
             SizedBox(

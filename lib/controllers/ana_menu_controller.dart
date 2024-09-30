@@ -7,6 +7,7 @@ class AnaMenuController extends GetxController {
     'Çorba': IconCon.corba,
     'Salata': IconCon.salata,
     'Pirinç Pilavı': IconCon.pilav,
+    'Tekrar Çorba': IconCon.corba,
   };
   var bildirimler = [
     '30 ağustos bilgilendirmesi',

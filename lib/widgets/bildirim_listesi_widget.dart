@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
-import 'package:opak_mobile/constants/text_style_con.dart';
 
 class BildirimListesiWidget extends StatelessWidget {
   final List<String> bildirimler;
@@ -28,7 +27,7 @@ class BildirimListesiWidget extends StatelessWidget {
                   ),
                   Text(
                     "Bildirimler",
-                    style: TextStyleCon.miniTitle,
+                    style: TextStyle(color: ColorCon.takvim, fontSize: 16),
                   )
                 ],
               ),
@@ -39,11 +38,16 @@ class BildirimListesiWidget extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: bildirimler.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: const Icon(
-                        Icons.notifications,
-                      ),
-                      title: Text(bildirimler[index]),
+                    return Column(
+                      children: [
+                        ListTile(
+                          leading: const Icon(
+                            Icons.notifications,
+                          ),
+                          title: Text(bildirimler[index]),
+                        ),
+                        const Divider()
+                      ],
                     );
                   },
                 ),

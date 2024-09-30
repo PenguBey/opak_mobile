@@ -37,7 +37,7 @@ class AnaMenuView extends GetView<AnaMenuController> {
           YemekListesiWidget(
             menuler: controller.menuler,
           ),
-          Expanded(
+          Flexible(
               child: BildirimListesiWidget(bildirimler: controller.bildirimler))
         ],
       ),
