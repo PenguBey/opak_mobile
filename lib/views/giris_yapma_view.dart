@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:opak_mobile/views/main_menu_view.dart';
 
-class LoginPage extends StatelessWidget {
+class GirisYapmaView extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  GirisYapmaView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Giriş Sayfası'),
+        title: const Text('Giriş Sayfası'),
         centerTitle: true,
       ),
       body: Padding(
@@ -21,26 +21,26 @@ class LoginPage extends StatelessWidget {
           children: [
             TextField(
               controller: usernameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Kullanıcı Adı',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             TextField(
               controller: passwordController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Şifre',
                 border: OutlineInputBorder(),
               ),
               obscureText: true,
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                Get.offNamed('/navigation');
+                Get.offNamed('/main_menu');
               },
-              child: Text('Giriş Yap'),
+              child: const Text('Giriş Yap'),
             ),
           ],
         ),
