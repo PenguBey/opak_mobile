@@ -12,19 +12,24 @@ class ProfilView extends GetView<ProfilController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Profil"),
+      ),
       body: Column(
         children: <Widget>[
           const UserTileWidget(),
           const SizedBox(height: 20),
           Expanded(
             child: GridView.builder(
-              itemCount: controller.test.length,
+              itemCount: controller.menuler.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, childAspectRatio: 1.5),
               itemBuilder: (context, index) {
                 return BasitBilgialanWiget(
-                    string: controller.test.keys.elementAt(index),
-                    iconData: controller.test.values.elementAt(index));
+                    string: controller.menuler[index][0],
+                    iconData: controller.menuler[index][1],
+                    route: controller.menuler[index][2],
+                    remove: controller.menuler[index][3]);
               },
             ),
           ),

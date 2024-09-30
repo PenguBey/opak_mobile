@@ -49,7 +49,7 @@ class PagerouteCon {
       }),
     ),
     GetPage(
-      name: '/menu_1',
+      name: '/menu',
       page: () => const MenuView(),
       binding: BindingsBuilder(() {
         Get.lazyPut<Menu1Controller>(() => Menu1Controller());

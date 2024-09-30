@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import '../constants/icon_con.dart';
 
 class ProfilController extends GetxController {
-  var test = {
-    'Ayarlar': IconCon.chat,
-    'Durum': IconCon.chat,
-    'Denetim': IconCon.onlineDiscussion,
-    'Kontrol': IconCon.onlineCalendar,
-  };
+  List<List<dynamic>> menuler = [
+    ['Ayarlar', IconCon.chat, null, false],
+    ['Durum', IconCon.onlineMessage, null, false],
+    ['Kontrol', IconCon.messageSent, null, false],
+    ['Denetim', IconCon.payments, null, false]
+  ];
 }
