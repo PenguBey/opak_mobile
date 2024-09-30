@@ -33,7 +33,7 @@ class NavigationView extends GetView<NavigationController> {
                 icon: Icons.info),
             TanitimCardWidget(
                 context: context,
-                route: '/menu_1',
+                route: '/menu',
                 title: "Menü",
                 icon: Icons.menu),
             TanitimCardWidget(
