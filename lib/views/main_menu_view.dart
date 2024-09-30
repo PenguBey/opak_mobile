@@ -13,10 +13,13 @@ class MainMenuView extends GetView<MainMenuController> {
   const MainMenuView({super.key});
 
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
+          const SizedBox(
+            height: 10,
+          ),
           const UserTileWidget(),
           const IntrinsicHeight(
             child: Row(
