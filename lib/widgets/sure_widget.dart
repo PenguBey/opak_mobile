@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/box_decor_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
@@ -12,8 +13,9 @@ class SureWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeCon.symCard,
-      padding: EdgeCon.symCard,
+      decoration: BoxDecorCon.siyahGolge(),
+      margin: EdgeCon.card,
+      padding: EdgeCon.card,
       child: Row(
         children: [
           Expanded(

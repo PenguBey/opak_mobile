@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:opak_mobile/constants/box_decor_con.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/icon_con.dart';
@@ -12,45 +13,36 @@ class KidemGunuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
+      decoration: BoxDecorCon.siyahGolge(ColorCon.sKidem),
       margin: EdgeCon.card,
-      color: ColorCon.kidem,
-      child: Padding(
-        padding: EdgeCon.card,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeCon.miniBaslik,
-              child: Text(
-                "Kıdem Gününüz",
-                style: TextStyleCon.negativeTitle,
-              ),
+      padding: EdgeCon.card,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeCon.miniBaslik,
+            child: Text(
+              "Kıdem Gününüz",
+              style: TextStyleCon.miniTitle,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '1 yıl',
-                      style: TextStyleCon.negative,
-                    ),
-                    Text('11 ay', style: TextStyleCon.negative),
-                    Text('16 gün', style: TextStyleCon.negative)
-                  ],
-                ),
-                SvgPicture.asset(
-                  IconCon.takvim,
-                  height: 50,
-                )
-              ],
-            )
-          ],
-        ),
+          ),
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '1 yıl',
+              ),
+              Text(
+                '11 ay',
+              ),
+              Text(
+                '16 gün',
+              )
+            ],
+          )
+        ],
       ),
     );
   }

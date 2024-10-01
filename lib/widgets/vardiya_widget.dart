@@ -5,6 +5,8 @@ import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/icon_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
+import '../constants/box_decor_con.dart';
+
 class VardiyaWidget extends StatelessWidget {
   const VardiyaWidget({
     super.key,
@@ -12,47 +14,35 @@ class VardiyaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
+      decoration: BoxDecorCon.siyahGolge(ColorCon.sVardiya),
       margin: EdgeCon.card,
-      color: ColorCon.vardiya,
-      child: Padding(
-        padding: EdgeCon.card,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeCon.miniBaslik,
-              child: Text(
-                "Vardiya",
-                style: TextStyleCon.negativeTitle,
-              ),
+      padding: EdgeCon.card,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeCon.miniBaslik,
+            child: Text(
+              "Vardiya",
+              style: TextStyleCon.miniTitle,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          ),
+          const Align(
+            alignment: Alignment.bottomLeft,
+            child: Column(
               children: [
-                SvgPicture.asset(
-                  IconCon.scooter,
-                  width: 50,
+                Text(
+                  "N0818.Vardiya",
                 ),
-                const Expanded(
-                  child: Column(
-                    children: [
-                      Text(
-                        "N0818.Vardiya",
-                        style: TextStyleCon.negative,
-                      ),
-                      Text(
-                        "08:00 - 18:00",
-                        style: TextStyleCon.negative,
-                      ),
-                    ],
-                  ),
-                )
+                Text(
+                  "08:00 - 18:00",
+                ),
               ],
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

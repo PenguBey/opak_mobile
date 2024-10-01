@@ -12,7 +12,7 @@ class UserTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecorCon.renkliGolgeOrta(ColorCon.blackshadow),
+      decoration: BoxDecorCon.siyahGolge(),
       margin: EdgeCon.card,
       padding: EdgeCon.card,
       child: const Row(

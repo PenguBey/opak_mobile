@@ -48,10 +48,6 @@ class YemekListesiWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(menuler.keys.elementAt(index)),
-                      SvgPicture.asset(
-                        menuler.values.elementAt(index),
-                        height: 40,
-                      ),
                     ],
                   ),
                 );

@@ -17,7 +17,7 @@ class MaasController extends GetxController {
       IconCon.mola,
       '/maasbilgileri_donemsel',
       false,
-      ColorCon.kidem
+      ColorCon.dikkat
     ],
   ];
 }
