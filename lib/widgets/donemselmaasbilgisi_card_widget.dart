@@ -21,7 +21,7 @@ class DonemselmaasbilgisiCardWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
+            Padding(
               padding: EdgeCon.miniBaslik,
               child: Text(
                 "Dönemsel Maaş Bilgisi - Haziran 3035",

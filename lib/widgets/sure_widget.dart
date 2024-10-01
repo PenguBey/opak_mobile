@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/color_con.dart';
 
@@ -10,70 +11,29 @@ class SureWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: ColorCon.foreGround,
-      child: Padding(
-        padding: EdgeCon.card,
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeCon.miniBaslik,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  RichText(
-                    text: const TextSpan(
-                      children: [
-                        WidgetSpan(
-                          child: Icon(
-                            Icons.calendar_month_outlined,
-                            color: ColorCon.takvim,
-                          ),
-                        ),
-                        TextSpan(
-                          text: "  22.08.2024 - Perşembe",
-                          style: TextStyle(
-                            color: ColorCon.takvim,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Text(
-                    "10 Sa. 21 Dk.",
-                    style: TextStyle(color: Colors.red, fontSize: 16),
-                  )
-                ],
-              ),
+    return Container(
+      height: 50,
+      padding: EdgeCon.card,
+      child: Row(
+        children: [
+          const Expanded(
+            child: Text(
+              "Giriş: 07:45",
+              textAlign: TextAlign.start,
             ),
-            const Row(
-              children: [
-                Expanded(
-                  child: Card(
-                    color: ColorCon.backGround,
-                    child: Padding(
-                      padding: EdgeCon.card,
-                      child: Text(
-                        "Giriş: 07:45",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Card(
-                    color: ColorCon.backGround,
-                    child: Padding(
-                      padding: EdgeCon.card,
-                      child: Text("Çıkış: 18:06", textAlign: TextAlign.center),
-                    ),
-                  ),
-                ),
-              ],
+          ),
+          const Expanded(
+            child: Text("Çıkış: 18:06", textAlign: TextAlign.center),
+          ),
+          Expanded(
+            flex: 2,
+            child: Text(
+              "Toplam: 10 Sa. 21 Dk.",
+              textAlign: TextAlign.end,
+              style: TextStyleCon.renkliMiniTitle(ColorCon.dikkat),
             ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
