@@ -36,6 +36,10 @@ class AnaMenuView extends GetView<AnaMenuController> {
             ),
           ),
           const SureWidget(),
+          const Divider(
+            endIndent: 100,
+            indent: 100,
+          ),
           YemekListesiWidget(
             menuler: controller.menuler,
           ),

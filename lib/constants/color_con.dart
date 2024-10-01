@@ -6,8 +6,8 @@ class ColorCon {
   static const dikkat = Color.fromRGBO(244, 67, 54, 1);
   static const takvim = Color.fromRGBO(0, 53, 122, 1);
   static const yemek = Color.fromRGBO(122, 120, 0, 1);
-  static const vardiya = Color.fromRGBO(184, 0, 230, 1);
-  static const kidem = Color.fromRGBO(0, 126, 230, 1);
+  static const vardiya = Color.fromRGBO(0, 118, 122, 1);
+  static const kidem = Color.fromRGBO(0, 122, 10, 1);
   static const blackshadow = Color.fromRGBO(87, 87, 87, 1);
   static const chart = LinearGradient(colors: [
     Color.fromRGBO(33, 149, 243, 0.2),

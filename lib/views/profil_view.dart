@@ -29,7 +29,8 @@ class ProfilView extends GetView<ProfilController> {
                     string: controller.menuler[index][0],
                     iconData: controller.menuler[index][1],
                     route: controller.menuler[index][2],
-                    remove: controller.menuler[index][3]);
+                    remove: controller.menuler[index][3],
+                    color: controller.menuler[index][4],);
               },
             ),
           ),
