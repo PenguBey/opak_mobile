@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
-import '../constants/color_con.dart';
 import '../constants/edge_con.dart';
 
 class BasitBilgialanWiget extends StatelessWidget {
@@ -21,40 +20,37 @@ class BasitBilgialanWiget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: ColorCon.foreGround,
-      child: InkWell(
-        onTap: () {
-          if (route != null && remove == true) {
-            Get.offAllNamed(route!);
-          } else if (route != null && remove == false) {
-            Get.toNamed(route!);
-          }
-        },
-        child: Padding(
-          padding: EdgeCon.card,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  const Expanded(child: SizedBox()),
-                  SvgPicture.asset(
-                    iconData,
-                    height: 50,
-                  )
-                ],
+    return InkWell(
+      onTap: () {
+        if (route != null && remove == true) {
+          Get.offAllNamed(route!);
+        } else if (route != null && remove == false) {
+          Get.toNamed(route!);
+        }
+      },
+      child: Padding(
+        padding: EdgeCon.card,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Column(
+              children: [
+                const Expanded(child: SizedBox()),
+                SvgPicture.asset(
+                  iconData,
+                  height: 50,
+                )
+              ],
+            ),
+            Expanded(
+              child: Text(
+                string,
+                textAlign: TextAlign.right,
+                style: TextStyleCon.miniTitle,
               ),
-              Expanded(
-                child: Text(
-                  string,
-                  textAlign: TextAlign.right,
-                  style: TextStyleCon.miniTitle,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

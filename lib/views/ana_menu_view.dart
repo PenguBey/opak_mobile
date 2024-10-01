@@ -19,7 +19,6 @@ class AnaMenuView extends GetView<AnaMenuController> {
         toolbarHeight: 0,
         scrolledUnderElevation: 0.0,
         backgroundColor: Colors.white,
-        centerTitle: true,
       ),
       body: Column(
         children: [

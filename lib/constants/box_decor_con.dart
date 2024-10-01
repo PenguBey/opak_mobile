@@ -19,7 +19,7 @@ class BoxDecorCon {
       color: Colors.white,
       boxShadow: [
         BoxShadow(
-          color: color.withOpacity(0.2),
+          color: color,
           spreadRadius: -7,
           blurRadius: 0,
           offset: const Offset(10, 10),
@@ -34,7 +34,7 @@ class BoxDecorCon {
       color: Colors.white,
       boxShadow: [
         BoxShadow(
-          color: color.withOpacity(0.2),
+          color: color,
           spreadRadius: -7,
           blurRadius: 0,
           offset: const Offset(-10, 10),
@@ -49,7 +49,7 @@ class BoxDecorCon {
       color: Colors.white,
       boxShadow: [
         BoxShadow(
-          color: color.withOpacity(0.2),
+          color: color,
           spreadRadius: -7,
           blurRadius: 0,
           offset: const Offset(0, 10),

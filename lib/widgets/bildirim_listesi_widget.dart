@@ -15,7 +15,6 @@ class BildirimListesiWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecorCon.renkliGolgeSag(ColorCon.takvim),
-      padding: EdgeCon.card,
       margin: EdgeCon.card,
       child: Column(
         children: [

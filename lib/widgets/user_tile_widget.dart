@@ -32,7 +32,7 @@ class UserTileWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "SELMAN KOYUNCU",
+                  "Zekeriya Çakır",
                   style: TextStyleCon.title,
                 ),
                 Text("MUHASEBE FİNANS EHİL PERSONELİ")

@@ -16,14 +16,19 @@ class SureWidget extends StatelessWidget {
       padding: EdgeCon.symCard,
       child: Row(
         children: [
-          const Expanded(
+          Expanded(
             child: Text(
               "Giriş: 07:45",
               textAlign: TextAlign.start,
+              style: TextStyleCon.miniTitle,
             ),
           ),
-          const Expanded(
-            child: Text("Çıkış: 18:06", textAlign: TextAlign.center),
+          Expanded(
+            child: Text(
+              "Çıkış: 18:06",
+              textAlign: TextAlign.center,
+              style: TextStyleCon.miniTitle,
+            ),
           ),
           Expanded(
             flex: 2,

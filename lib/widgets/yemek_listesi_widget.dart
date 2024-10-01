@@ -17,7 +17,6 @@ class YemekListesiWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecorCon.renkliGolgeSag(ColorCon.yemek),
       margin: EdgeCon.card,
-      padding: EdgeCon.card,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
