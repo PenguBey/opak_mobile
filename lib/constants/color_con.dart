@@ -18,11 +18,13 @@ class ColorCon {
   static const backGradient = BoxDecoration(
     gradient: LinearGradient(
       colors: [
-        Colors.white,
-        Colors.white,
+        Colors.blue,
+        Colors.lightBlue,
       ],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
   );
+
+  static var primary;
 }
