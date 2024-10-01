@@ -12,8 +12,8 @@ class SureWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      padding: EdgeCon.card,
+      margin: EdgeCon.symCard,
+      padding: EdgeCon.symCard,
       child: Row(
         children: [
           const Expanded(
