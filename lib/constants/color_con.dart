@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ColorCon {
+  static const anaRenk = Colors.green;
+
   static const backGround = Color.fromRGBO(224, 243, 245, 1);
 
   static const dikkat = Color.fromRGBO(244, 67, 54, 1);
