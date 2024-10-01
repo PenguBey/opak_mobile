@@ -13,7 +13,8 @@ class VardiyaWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: ColorCon.foreGround,
+      margin: EdgeCon.card,
+      color: ColorCon.vardiya,
       child: Padding(
         padding: EdgeCon.card,
         child: Column(
@@ -24,14 +25,14 @@ class VardiyaWidget extends StatelessWidget {
               padding: EdgeCon.miniBaslik,
               child: Text(
                 "Vardiya",
-                style: TextStyleCon.miniTitle,
+                style: TextStyleCon.negativeTitle,
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SvgPicture.asset(
-                  IconCon.soru,
+                  IconCon.scooter,
                   width: 50,
                 ),
                 const Expanded(
@@ -39,8 +40,12 @@ class VardiyaWidget extends StatelessWidget {
                     children: [
                       Text(
                         "N0818.Vardiya",
+                        style: TextStyleCon.negative,
                       ),
-                      Text("08:00 - 18:00"),
+                      Text(
+                        "08:00 - 18:00",
+                        style: TextStyleCon.negative,
+                      ),
                     ],
                   ),
                 )

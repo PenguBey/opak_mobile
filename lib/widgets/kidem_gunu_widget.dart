@@ -13,7 +13,8 @@ class KidemGunuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: ColorCon.foreGround,
+      margin: EdgeCon.card,
+      color: ColorCon.kidem,
       child: Padding(
         padding: EdgeCon.card,
         child: Column(
@@ -24,7 +25,7 @@ class KidemGunuWidget extends StatelessWidget {
               padding: EdgeCon.miniBaslik,
               child: Text(
                 "Kıdem Gününüz",
-                style: TextStyleCon.miniTitle,
+                style: TextStyleCon.negativeTitle,
               ),
             ),
             Row(
@@ -33,7 +34,14 @@ class KidemGunuWidget extends StatelessWidget {
               children: [
                 const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text('1 yıl'), Text('11 ay'), Text('16 gün')],
+                  children: [
+                    Text(
+                      '1 yıl',
+                      style: TextStyleCon.negative,
+                    ),
+                    Text('11 ay', style: TextStyleCon.negative),
+                    Text('16 gün', style: TextStyleCon.negative)
+                  ],
                 ),
                 SvgPicture.asset(
                   IconCon.takvim,
