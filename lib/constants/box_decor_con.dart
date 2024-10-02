@@ -15,46 +15,15 @@ class BoxDecorCon {
     );
   }
 
-  static BoxDecoration renkliGolgeSag(Color color, [Color? background]) {
+  static BoxDecoration renkliCard([Color? background]) {
     return BoxDecoration(
       borderRadius: const BorderRadius.all(Radius.circular(10)),
       color: background ?? Colors.white,
       boxShadow: [
         BoxShadow(
-          color: color,
-          spreadRadius: -7,
-          blurRadius: 0,
-          offset: const Offset(10, 10),
-        ),
-      ],
-    );
-  }
-
-  static BoxDecoration renkliGolgeSol(Color color) {
-    return BoxDecoration(
-      borderRadius: const BorderRadius.all(Radius.circular(10)),
-      color: Colors.white,
-      boxShadow: [
-        BoxShadow(
-          color: color,
-          spreadRadius: -7,
-          blurRadius: 0,
-          offset: const Offset(-10, 10),
-        ),
-      ],
-    );
-  }
-
-  static renkliGolgeOrta(Color color) {
-    return BoxDecoration(
-      borderRadius: const BorderRadius.all(Radius.circular(10)),
-      color: Colors.white,
-      boxShadow: [
-        BoxShadow(
-          color: color,
-          spreadRadius: -7,
-          blurRadius: 0,
-          offset: const Offset(0, 10),
+          color: Colors.grey.withOpacity(0.4),
+          spreadRadius: 0,
+          blurRadius: 5,
         ),
       ],
     );
