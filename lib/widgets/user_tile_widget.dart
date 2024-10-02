@@ -23,7 +23,7 @@ class UserTileWidget extends StatelessWidget {
             child: CircleAvatar(
               radius: 28,
               foregroundImage: NetworkImage(
-                "https://avatars.githubusercontent.com/u/124432670?v=4",
+                "https://media.licdn.com/dms/image/D4D03AQE1hZCswa8wtQ/profile-displayphoto-shrink_200_200/0/1714775679073?e=2147483647&v=beta&t=fcpxehg35iOKJvHKltTOaFhB05rLnm7DkxFDI-kqVLE",
               ),
             ),
           ),
