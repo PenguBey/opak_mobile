@@ -12,4 +12,10 @@ class EdgeCon {
   );
 
   static final raius = BorderRadius.circular(12);
+
+  static var cardMargin;
+
+  static var cardPadding;
+
+  static var miniBaslikPadding;
 }
