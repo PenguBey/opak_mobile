@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
+import 'package:opak_mobile/constants/image_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 import 'package:dotted_border/dotted_border.dart';
 
@@ -26,9 +27,7 @@ class GirisYapmaView extends StatelessWidget {
                 dashPattern: const [12, 12],
                 padding: const EdgeInsets.all(6),
                 child: const CircleAvatar(
-                  foregroundImage: NetworkImage(
-                    "https://media.licdn.com/dms/image/D4D03AQE1hZCswa8wtQ/profile-displayphoto-shrink_200_200/0/1714775679073?e=2147483647&v=beta&t=fcpxehg35iOKJvHKltTOaFhB05rLnm7DkxFDI-kqVLE",
-                  ),
+                  foregroundImage: AssetImage(ImageCon.user),
                   backgroundColor: Colors.white,
                   maxRadius: 50,
                 ),
@@ -93,7 +92,6 @@ class GirisYapmaView extends StatelessWidget {
                 height: 20,
               )
             ],
-
           ),
         ),
       ),

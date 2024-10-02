@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opak_mobile/constants/image_con.dart';
 
 import '../constants/box_decor_con.dart';
 import '../constants/edge_con.dart';
@@ -19,9 +20,8 @@ class UserTileWidget extends StatelessWidget {
             padding: EdgeInsets.only(right: 16),
             child: CircleAvatar(
               radius: 28,
-              foregroundImage: NetworkImage(
-                "https://media.licdn.com/dms/image/D4D03AQE1hZCswa8wtQ/profile-displayphoto-shrink_200_200/0/1714775679073?e=2147483647&v=beta&t=fcpxehg35iOKJvHKltTOaFhB05rLnm7DkxFDI-kqVLE",
-              ),
+              backgroundColor: Colors.white,
+              foregroundImage: AssetImage(ImageCon.user),
             ),
           ),
           SizedBox(width: 16),
@@ -29,7 +29,7 @@ class UserTileWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Zekeriya Çakır",
+                "Efe Ömer",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Text(
