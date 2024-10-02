@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:opak_mobile/constants/edge_con.dart';
-import 'package:opak_mobile/constants/icon_con.dart';
+
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 class DonemselmaasbilgisiCardWidget extends StatelessWidget {
@@ -20,19 +20,15 @@ class DonemselmaasbilgisiCardWidget extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeCon.miniBaslik,
-            child: Text(
-              "Dönemsel Maaş Bilgisi - Haziran 3035",
-              style: TextStyleCon.miniTitle,
+            child: Center(
+              child: Text(
+                "Dönemsel Maaş Bilgisi - Haziran 3035",
+                style: TextStyleCon.miniTitle,
+              ),
             ),
           ),
           Row(
             children: [
-              Expanded(
-                  flex: 1,
-                  child: SvgPicture.asset(
-                    IconCon.payments,
-                    height: 70,
-                  )),
               Expanded(
                 flex: 2,
                 child: Column(
@@ -51,7 +47,7 @@ class DonemselmaasbilgisiCardWidget extends StatelessWidget {
                             textAlign: TextAlign.end,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               item[1],
                               textAlign: TextAlign.end,
