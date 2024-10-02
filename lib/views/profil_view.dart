@@ -31,7 +31,6 @@ class ProfilView extends GetView<ProfilController> {
                   route: controller.menuler[index][2],
                   remove: controller.menuler[index][3],
                   color: controller.menuler[index][4],
-                  background: controller.menuler[index][5],
                 );
               },
             ),

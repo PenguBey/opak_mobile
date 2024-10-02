@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:opak_mobile/constants/color_con.dart';
@@ -12,7 +11,6 @@ class MaasController extends GetxController {
       IconCon.mobileMarketing,
       '/maas_bilgileri',
       false,
-      ColorCon.takvim,
       ColorCon.sKidem
     ],
     [
@@ -20,7 +18,6 @@ class MaasController extends GetxController {
       IconCon.fileSync,
       '/maasbilgileri_donemsel',
       false,
-      Colors.green,
       ColorCon.sVardiya
     ],
   ];

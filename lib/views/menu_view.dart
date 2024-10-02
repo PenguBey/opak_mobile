@@ -25,7 +25,6 @@ class MenuView extends GetView<Menu1Controller> {
             route: controller.menuler[index][2],
             remove: controller.menuler[index][3],
             color: controller.menuler[index][4],
-            background:  controller.menuler[index][5],
           );
         },
       ),

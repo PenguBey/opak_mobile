@@ -25,7 +25,6 @@ class MaasView extends GetView<MaasController> {
             route: controller.menuler[index][2],
             remove: controller.menuler[index][3],
             color: controller.menuler[index][4],
-            background: controller.menuler[index][5],
           );
         },
       ),
