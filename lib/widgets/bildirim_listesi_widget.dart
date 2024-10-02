@@ -14,21 +14,17 @@ class BildirimListesiWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecorCon.renkliGolgeSag(ColorCon.takvim),
+      decoration: BoxDecorCon.renkliGolgeSag(ColorCon.takvim, ColorCon.sKidem),
       margin: EdgeCon.card,
       child: Column(
         children: [
-          Padding(
-            padding: EdgeCon.miniBaslik,
+          const Padding(
+            padding: EdgeCon.card,
             child: Row(
               children: [
-                const Icon(
-                  Icons.notifications,
-                  color: ColorCon.takvim,
-                ),
                 Text(
                   "Bildirimler",
-                  style: TextStyleCon.renkliMiniTitle(ColorCon.takvim),
+                  style: TextStyleCon.title,
                 )
               ],
             ),

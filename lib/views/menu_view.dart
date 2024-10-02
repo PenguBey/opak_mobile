@@ -20,11 +20,13 @@ class MenuView extends GetView<Menu1Controller> {
             crossAxisCount: 2, childAspectRatio: 1.5),
         itemBuilder: (context, index) {
           return BasitBilgialanWiget(
-              string: controller.menuler[index][0],
-              iconData: controller.menuler[index][1],
-              route: controller.menuler[index][2],
-              remove: controller.menuler[index][3],
-                    color: controller.menuler[index][4],);
+            string: controller.menuler[index][0],
+            iconData: controller.menuler[index][1],
+            route: controller.menuler[index][2],
+            remove: controller.menuler[index][3],
+            color: controller.menuler[index][4],
+            background:  controller.menuler[index][5],
+          );
         },
       ),
     );

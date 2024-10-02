@@ -11,6 +11,7 @@ class BasitBilgialanWiget extends StatelessWidget {
   final String iconData;
   final String? route;
   final Color color;
+  final Color? background;
   final bool remove;
   const BasitBilgialanWiget({
     super.key,
@@ -19,6 +20,7 @@ class BasitBilgialanWiget extends StatelessWidget {
     required this.route,
     required this.remove,
     required this.color,
+    required this.background,
   });
 
   @override
@@ -33,7 +35,7 @@ class BasitBilgialanWiget extends StatelessWidget {
       },
       child: Container(
         margin: EdgeCon.card,
-        decoration: BoxDecorCon.renkliGolgeSag(color),
+        decoration: BoxDecorCon.renkliGolgeSag(color, background),
         padding: EdgeCon.card,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

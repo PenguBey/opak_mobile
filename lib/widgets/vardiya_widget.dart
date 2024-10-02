@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../constants/box_decor_con.dart';
+import 'package:opak_mobile/constants/box_decor_con.dart';
+import 'package:opak_mobile/constants/color_con.dart';
+import 'package:opak_mobile/constants/edge_con.dart';
 
 class VardiyaWidget extends StatelessWidget {
   const VardiyaWidget({super.key});
@@ -8,16 +9,13 @@ class VardiyaWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.orange[50],
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Column(
+      margin: EdgeCon.card,
+      padding: EdgeCon.card,
+      decoration: BoxDecorCon.siyahGolge(ColorCon.sVardiya),
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           Text(
             "Vardiya",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

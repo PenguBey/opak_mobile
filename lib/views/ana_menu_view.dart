@@ -39,6 +39,7 @@ class AnaMenuView extends GetView<AnaMenuController> {
           const Divider(
             endIndent: 100,
             indent: 100,
+            color: Colors.grey,
           ),
           YemekListesiWidget(
             menuler: controller.menuler,

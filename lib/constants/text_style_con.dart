@@ -15,7 +15,6 @@ class TextStyleCon {
     color: Colors.white,
   );
 
-  static var subtitle;
 
   static TextStyle renkliMiniTitle(Color renk) {
     return TextStyle(color: renk, fontSize: _minibaslikSize);

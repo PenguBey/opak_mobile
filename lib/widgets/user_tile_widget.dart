@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../constants/box_decor_con.dart';
+import '../constants/edge_con.dart';
+
 class UserTileWidget extends StatelessWidget {
   const UserTileWidget({super.key});
 
@@ -21,10 +24,10 @@ class UserTileWidget extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 "Zekeriya Çakır",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

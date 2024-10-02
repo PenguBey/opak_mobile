@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/constants/box_decor_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
-import 'package:opak_mobile/constants/text_style_con.dart';
 
-import '../constants/color_con.dart';
 
 class SureWidget extends StatelessWidget {
   const SureWidget({super.key});
@@ -11,8 +8,8 @@ class SureWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      padding: const EdgeInsets.all(16),
+      margin: EdgeCon.card,
+      padding: EdgeCon.card,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
@@ -24,9 +21,9 @@ class SureWidget extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           Text("Giriş: 07:45",
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
           Text("Çıkış: 18:06",
