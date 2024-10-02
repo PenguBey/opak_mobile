@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:opak_mobile/constants/color_con.dart';
 
 class BoxDecorCon {
-  static const siyahGolge = BoxDecoration(
-    color: Colors.white,
-    boxShadow: [
-      BoxShadow(
-        color: ColorCon.blackshadow,
-        spreadRadius: 1,
-        blurRadius: 7,
-        offset: Offset(0, 5),
-      ),
-    ],
-  );
-  static renkliGolgeSag(Color color) {
+  static BoxDecoration siyahGolge([Color? color]) {
+    return BoxDecoration(
+        color: color ?? Colors.white,
+        boxShadow: const [
+          BoxShadow(
+            color: ColorCon.blackshadow,
+            spreadRadius: -8,
+            blurRadius: 8,
+            offset: Offset(4, 4),
+          ),
+        ],
+        borderRadius: const BorderRadius.all(Radius.circular(10)));
+  }
+
+  static BoxDecoration renkliGolgeSag(Color color) {
     return BoxDecoration(
       borderRadius: const BorderRadius.all(Radius.circular(10)),
       color: Colors.white,
@@ -21,14 +24,14 @@ class BoxDecorCon {
         BoxShadow(
           color: color,
           spreadRadius: -7,
-          blurRadius: 0,
+          blurRadius: 3,
           offset: const Offset(10, 10),
         ),
       ],
     );
   }
 
-  static renkliGolgeSol(Color color) {
+  static BoxDecoration renkliGolgeSol(Color color) {
     return BoxDecoration(
       borderRadius: const BorderRadius.all(Radius.circular(10)),
       color: Colors.white,

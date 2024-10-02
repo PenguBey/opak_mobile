@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants/box_decor_con.dart';
+
 class VardiyaWidget extends StatelessWidget {
   const VardiyaWidget({super.key});
 

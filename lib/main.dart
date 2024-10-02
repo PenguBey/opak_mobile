@@ -16,9 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color.fromARGB(255, 245, 245, 245),
-          useMaterial3: true,
-          textTheme: GoogleFonts.notoSansGujaratiTextTheme()),
+        scaffoldBackgroundColor: const Color.fromARGB(50, 0, 0, 255),
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: const Color.fromARGB(255, 0, 0, 255),
+          secondary: Colors.orangeAccent,
+        ),
+      ),
       initialRoute: '/giris',
       getPages: PagerouteCon.getPage,
       unknownRoute: PagerouteCon.unknownRoute,

@@ -6,8 +6,8 @@ import '../constants/icon_con.dart';
 class ProfilController extends GetxController {
   List<List<dynamic>> menuler = [
     ['Ayarlar', IconCon.chat, null, false, ColorCon.yemek],
-    ['Durum', IconCon.onlineMessage, null, false, ColorCon.kidem],
+    ['Durum', IconCon.onlineMessage, null, false, ColorCon.dikkat],
     ['Kontrol', IconCon.messageSent, null, false, ColorCon.takvim],
-    ['Denetim', IconCon.payments, null, false, ColorCon.vardiya]
+    ['Denetim', IconCon.payments, null, false, ColorCon.blackshadow]
   ];
 }

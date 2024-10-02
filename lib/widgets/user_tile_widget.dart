@@ -6,25 +6,20 @@ class UserTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-          ),
-        ],
-      ),
-      child: Row(
+      decoration: BoxDecorCon.siyahGolge(),
+      margin: EdgeCon.card,
+      padding: EdgeCon.card,
+      child: const Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const CircleAvatar(
-            radius: 28,
-            backgroundImage: NetworkImage(
-                "https://avatars.githubusercontent.com/u/124432670?v=4"),
+          Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: CircleAvatar(
+              radius: 28,
+              foregroundImage: NetworkImage(
+                "https://media.licdn.com/dms/image/D4D03AQE1hZCswa8wtQ/profile-displayphoto-shrink_200_200/0/1714775679073?e=2147483647&v=beta&t=fcpxehg35iOKJvHKltTOaFhB05rLnm7DkxFDI-kqVLE",
+              ),
+            ),
           ),
           const SizedBox(width: 16),
           Column(

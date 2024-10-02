@@ -17,7 +17,7 @@ class MaasController extends GetxController {
       IconCon.fileSync,
       '/maasbilgileri_donemsel',
       false,
-      ColorCon.kidem
+      ColorCon.dikkat
     ],
   ];
 }

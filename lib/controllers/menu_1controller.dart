@@ -6,6 +6,6 @@ import '../constants/icon_con.dart';
 class Menu1Controller extends GetxController {
   List<List<dynamic>> menuler = [
     ['Menü Sayfası', IconCon.chat, '/main_menu', true, ColorCon.takvim],
-    ['Maaş Sayfası', IconCon.onlineMessage, '/maas', false, ColorCon.vardiya]
+    ['Maaş Sayfası', IconCon.onlineMessage, '/maas', false, ColorCon.yemek]
   ];
 }
