@@ -11,5 +11,5 @@ class EdgeCon {
     height: 40,
   );
 
-  static final raius = BorderRadius.circular(12);
+  static final raius = BorderRadius.circular(8);
 }

@@ -24,37 +24,46 @@ class BasitBilgialanWiget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecorCon.renkliCard(color),
       margin: EdgeCon.card,
-      padding: EdgeCon.card,
-      child: InkWell(
-        onTap: () {
-          if (route != null && remove == true) {
-            Get.offAllNamed(route!);
-          } else if (route != null && remove == false) {
-            Get.toNamed(route!);
-          }
-        },
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Column(
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: EdgeCon.raius,
+          onTap: () async {
+            await Future.delayed(const Duration(milliseconds: 150));
+            if (route != null && remove == true) {
+              Get.offAllNamed(route!);
+            } else if (route != null && remove == false) {
+              Get.toNamed(route!);
+            }
+          },
+          child: Padding(
+            padding: EdgeCon.card,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Expanded(child: SizedBox()),
-                SvgPicture.asset(
-                  iconData,
-                  height: 40,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const SizedBox(),
+                    SvgPicture.asset(
+                      iconData,
+                      height: 40,
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: Text(
+                    string,
+                    textAlign: TextAlign.right,
+                    style: TextStyleCon.miniTitle,
+                  ),
                 ),
               ],
             ),
-            Expanded(
-              child: Text(
-                string,
-                textAlign: TextAlign.right,
-                style: TextStyleCon.miniTitle,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
