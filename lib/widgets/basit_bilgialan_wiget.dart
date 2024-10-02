@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:opak_mobile/constants/box_decor_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
 import '../constants/edge_con.dart';
@@ -35,7 +34,6 @@ class BasitBilgialanWiget extends StatelessWidget {
       },
       child: Container(
         margin: EdgeCon.card,
-        decoration: BoxDecorCon.renkliGolgeSag(color, background),
         padding: EdgeCon.card,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

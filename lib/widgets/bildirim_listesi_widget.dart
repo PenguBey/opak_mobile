@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:opak_mobile/constants/box_decor_con.dart';
-import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 
@@ -14,7 +12,6 @@ class BildirimListesiWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecorCon.renkliGolgeSag(ColorCon.takvim, ColorCon.sKidem),
       margin: EdgeCon.card,
       child: Column(
         children: [
