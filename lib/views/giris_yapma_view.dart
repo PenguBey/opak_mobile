@@ -5,6 +5,7 @@ import 'package:opak_mobile/constants/color_con.dart';
 import 'package:opak_mobile/constants/edge_con.dart';
 import 'package:opak_mobile/constants/text_style_con.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:opak_mobile/constants/color_con.dart';
 
 class GirisYapmaView extends StatelessWidget {
   final TextEditingController usernameController = TextEditingController();
@@ -96,6 +97,7 @@ class GirisYapmaView extends StatelessWidget {
                 height: 20,
               )
             ],
+
           ),
         ),
       ),

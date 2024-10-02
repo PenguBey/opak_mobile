@@ -20,11 +20,15 @@ class ColorCon {
   static const backGradient = BoxDecoration(
     gradient: LinearGradient(
       colors: [
+
         Color.fromARGB(255, 0, 0, 36),
         Color.fromARGB(255, 0, 0, 139),
+
       ],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
   );
+
+  static var primary;
 }

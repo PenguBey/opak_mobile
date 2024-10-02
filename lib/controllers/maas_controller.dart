@@ -14,7 +14,7 @@ class MaasController extends GetxController {
     ],
     [
       'Maaş Bilgileri',
-      IconCon.mola,
+      IconCon.fileSync,
       '/maasbilgileri_donemsel',
       false,
       ColorCon.dikkat
